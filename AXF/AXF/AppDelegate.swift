@@ -15,28 +15,98 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        //1,  最简单的字典转模型
+        //var dict = ["name":"hejunmeng","age":20]
+        //var user = User.objectWithKeyValues(dict) as? User
         
-//        let dict = ["code":2,
-//                    "msg":"success",
-//                    "parentVar":"hha 我是父类的",
-//                    "data":[
-//                                ["title":"he1",
-//                                 "img_name":"my1.png"
-//                                ],
-//                                ["title":"he2",
-//                                "img_name":"my2.png"
-//                                ]
-//                            ]
-//                    ];
-//       var model = DictModelManager.shareManager().objectFromDictionary(dict, cls: ADModel.self)as?ADModel
+//       //2, 模型中包裹模型
+//        let dict = ["text":"Agree!Nice weather!",
+//                     "user":["name":"Jack",
+//                             "icon":"lufy.png"
+//                            ],
+//            "retweetedStatus":["text":"Nice weather!",
+//                                "user":["name":"Rose",
+//                                        "icon":"nami.png"
+//                                       ]
+//              ]
+//        ]
+//        var status = Status.objectWithKeyValues(dict) as? Status
         
-        var adModel = ADModel();
-        adModel.code = -5;
-        adModel.msg = "hello"
         
-        var dict =  DictModelManager.shareManager().objectToKeyValues(adModel)
+//        //3,字典中包裹数组， 数组中的元素是赢一个模型对应的字典
+//        let dict =  ["code":-90,
+//            "msg":"这是一条msg",
+//            "parentVar1":"parent_______",
+//            "ad":[["title_AD":"ad1,title"],["title_AD":"ad2,title"],["title_AD":"ad3,title"]]
+//        ]
+//        let adModel = ADModel.objectWithKeyValues(dict) as? ADModel
+//        
+//        if let count = adModel?.ad?.count{
+//            for var i in 0..<count{
+//                var item  = adModel?.ad![i];
+//                print(item)
+//                
+//            }
+//        }
+        
+//        //4, 将一个字典数组转成模型数组
+//        let arrayOfStatus = [["text":"Agree!Nice weather!",
+//                             "user":["name":"Jack",
+//                                     "icon":"lufy.png"
+//                                    ],
+//                            "retweetedStatus":["text":"Nice weather!",
+//                                                "user":["name":"Rose",
+//                                                        "icon":"nami.png"
+//                                                       ]
+//                                               ]
+//                            ],
+//                            ["text":"Agree!Nice weather!",
+//                              "user":["name":"Jack",
+//                                       "icon":"lufy.png"
+//                                     ],
+//                            "retweetedStatus":["text":"Nice weather!",
+//                                                "user":["name":"Rose",
+//                                                        "icon":"nami.png"
+//                                                       ]
+//                                               ]
+//                            ]]
+//        
+//        var status = Status.objectArrayWithKeyValuesArray(arrayOfStatus)
+//        
+//        for var item in (status! as! [Status]){
+//            print(item.description)
+//        }
+        
+        
+    
+        
        return true
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func addNotification(){
         //新手引导结束

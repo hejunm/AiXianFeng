@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		232C6B981CCE507700E7A55D /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6B971CCE507600E7A55D /* ADModel.swift */; };
+		23595E1C1CD07F710011A2B8 /* HE_Dict2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23595E191CD07F710011A2B8 /* HE_Dict2Model.swift */; };
+		23595E1D1CD07F710011A2B8 /* HE_Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23595E1A1CD07F710011A2B8 /* HE_Foundation.swift */; };
+		23595E1E1CD07F710011A2B8 /* HE_Model2Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23595E1B1CD07F710011A2B8 /* HE_Model2Dict.swift */; };
+		23595E221CD07F8C0011A2B8 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23595E201CD07F8C0011A2B8 /* Status.swift */; };
+		23595E231CD07F8C0011A2B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23595E211CD07F8C0011A2B8 /* User.swift */; };
 		2383005E1CCDBBAD00864F7F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383005A1CCDBBAD00864F7F /* BaseViewController.swift */; };
 		238300611CCDBC3A00864F7F /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300601CCDBC3A00864F7F /* UIColor+Extention.swift */; };
 		238300661CCDBFD200864F7F /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300651CCDBFD200864F7F /* GuideViewController.swift */; };
@@ -38,6 +43,11 @@
 
 /* Begin PBXFileReference section */
 		232C6B971CCE507600E7A55D /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
+		23595E191CD07F710011A2B8 /* HE_Dict2Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HE_Dict2Model.swift; sourceTree = "<group>"; };
+		23595E1A1CD07F710011A2B8 /* HE_Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HE_Foundation.swift; sourceTree = "<group>"; };
+		23595E1B1CD07F710011A2B8 /* HE_Model2Dict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HE_Model2Dict.swift; sourceTree = "<group>"; };
+		23595E201CD07F8C0011A2B8 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		23595E211CD07F8C0011A2B8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2383005A1CCDBBAD00864F7F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		238300601CCDBC3A00864F7F /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		238300651CCDBFD200864F7F /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +107,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23595E181CD07F710011A2B8 /* HEExentionLib */ = {
+			isa = PBXGroup;
+			children = (
+				23595E191CD07F710011A2B8 /* HE_Dict2Model.swift */,
+				23595E1A1CD07F710011A2B8 /* HE_Foundation.swift */,
+				23595E1B1CD07F710011A2B8 /* HE_Model2Dict.swift */,
+			);
+			path = HEExentionLib;
+			sourceTree = "<group>";
+		};
+		23595E1F1CD07F8C0011A2B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23595E201CD07F8C0011A2B8 /* Status.swift */,
+				23595E211CD07F8C0011A2B8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		238300581CCDBBAD00864F7F /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +169,7 @@
 		238300691CCDF4D600864F7F /* AD */ = {
 			isa = PBXGroup;
 			children = (
+				23595E1F1CD07F8C0011A2B8 /* Models */,
 				2383006B1CCDF52E00864F7F /* ADViewController.swift */,
 				232C6B971CCE507600E7A55D /* ADModel.swift */,
 			);
@@ -157,6 +187,7 @@
 		238300711CCDFACD00864F7F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				23595E181CD07F710011A2B8 /* HEExentionLib */,
 				238300721CCDFAFD00864F7F /* SDWebImage */,
 			);
 			path = Libs;
@@ -300,9 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23595E1E1CD07F710011A2B8 /* HE_Model2Dict.swift in Sources */,
 				238300981CCDFAFD00864F7F /* SDWebImageDecoder.m in Sources */,
 				2383009B1CCDFAFD00864F7F /* SDWebImageManager.m in Sources */,
 				238300951CCDFAFD00864F7F /* NSData+ImageContentType.m in Sources */,
+				23595E231CD07F8C0011A2B8 /* User.swift in Sources */,
 				238300971CCDFAFD00864F7F /* SDWebImageCompat.m in Sources */,
 				238300A31CCDFAFD00864F7F /* UIView+WebCacheOperation.m in Sources */,
 				238300A01CCDFAFD00864F7F /* UIImage+WebP.m in Sources */,
@@ -310,6 +343,7 @@
 				238300A11CCDFAFD00864F7F /* UIImageView+HighlightedWebCache.m in Sources */,
 				2383006E1CCDF8C800864F7F /* UIDevice+Extention.swift in Sources */,
 				239660F31CCCED2700113951 /* AppDelegate.swift in Sources */,
+				23595E221CD07F8C0011A2B8 /* Status.swift in Sources */,
 				2383009D1CCDFAFD00864F7F /* UIButton+WebCache.m in Sources */,
 				2383009C1CCDFAFD00864F7F /* SDWebImagePrefetcher.m in Sources */,
 				2383009A1CCDFAFD00864F7F /* SDWebImageDownloaderOperation.m in Sources */,
@@ -317,6 +351,7 @@
 				232C6B981CCE507700E7A55D /* ADModel.swift in Sources */,
 				238300681CCDC9B800864F7F /* GuideCell.swift in Sources */,
 				2383009F1CCDFAFD00864F7F /* UIImage+MultiFormat.m in Sources */,
+				23595E1D1CD07F710011A2B8 /* HE_Foundation.swift in Sources */,
 				239AC9181CCF924300638EDB /* DictModelManager.swift in Sources */,
 				238300701CCDFAC200864F7F /* Config.swift in Sources */,
 				238300961CCDFAFD00864F7F /* SDImageCache.m in Sources */,
@@ -324,6 +359,7 @@
 				2383005E1CCDBBAD00864F7F /* BaseViewController.swift in Sources */,
 				2383009E1CCDFAFD00864F7F /* UIImage+GIF.m in Sources */,
 				238300991CCDFAFD00864F7F /* SDWebImageDownloader.m in Sources */,
+				23595E1C1CD07F710011A2B8 /* HE_Dict2Model.swift in Sources */,
 				238300A21CCDFAFD00864F7F /* UIImageView+WebCache.m in Sources */,
 				238300941CCDFAFD00864F7F /* MKAnnotationView+WebCache.m in Sources */,
 			);
