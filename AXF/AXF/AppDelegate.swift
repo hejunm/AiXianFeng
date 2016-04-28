@@ -77,6 +77,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            print(item.description)
 //        }
         
+//        //5,  模型传字典，最简单形式
+//        let user = User()
+//        user.name = "hejunm"
+//        user.icon = "my.png"
+//        let dict = user.keyValues
+//        //6, 模型传字典， 模型中还有模型
+//        
+//        let user = User()
+//        user.name = "retweeted user hejunm"
+//        user.icon = "my.png"
+//        
+//        let retweetedStatus = Status();
+//        retweetedStatus.text = "this is retweeted status";
+//        retweetedStatus.user = user
+//        
+//        
+//        let oriUser = User()
+//        oriUser.name = "original user"
+//        oriUser.icon = "my.png"
+//        
+//        let oriStatus = Status();
+//        oriStatus.text = "this is original status"
+//        oriStatus.user = oriUser
+//        oriStatus.retweetedStatus = retweetedStatus
+//        
+//        let dic =  oriStatus.keyValues
+//        
+//        print(dic)
+//        /**
+//        Optional(
+//        ["text": this is original status, 
+//         "user": {
+//                    icon = "my.png";
+//                    name = "original user";
+//                 },
+//        "retweetedStatus": {
+//            text = "this is retweeted status";
+//            user = {
+//                        icon = "my.png";
+//                        name = "retweeted user hejunm";
+//                   };
+//        }])
+//        
+//        */
+        
+        
+        //7,  模型数据
+//        let user1 = User()
+//        user1.name = "hejunm_1"
+//        user1.icon = "my.png_1"
+//        
+//        let user2 = User()
+//        user2.name = "hejunm_2"
+//        user2.icon = "my.png_2"
+//        
+//        let userArray = [user1,user2] as NSArray
+//        print(userArray.keyValuesArray)
+//        
+//        
+//        /*** Optional([
+//        {
+//            icon = "my.png_1";
+//            name = "hejunm_1";
+//        }, 
+//        {
+//            icon = "my.png_2";
+//            name = "hejunm_2";
+//        }])*/
+        
         
     
         
