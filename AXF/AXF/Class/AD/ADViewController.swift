@@ -10,14 +10,9 @@ import UIKit
 
 class ADViewController: BaseViewController {
     
+    private lazy var backImageView:UIImageView = UIImageView(frame: ScreenBounds)
     
-    private lazy var backImageView:UIImageView = {  //懒加载， 在使用的时候才去创建
-        let imageView = UIImageView(frame: ScreenBounds)
-        return imageView
-    }()
-    
-    
-     var imageName:String?{ //设置广告图片
+    var imageName:String?{ //设置广告图片
         didSet{
             if imageName == nil { return}
             
@@ -37,12 +32,13 @@ class ADViewController: BaseViewController {
             backImageView.sd_setImageWithURL(NSURL(string: imageName!), placeholderImage: UIImage(named: placeholderImageName!)) { (image, error, _,_) -> Void in
                 if error != nil || image == nil{
                     NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFinished, object: nil, userInfo: nil)
+                    UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
                     return;
                 }
                 //延时发送通知， 将图片给主控制器。
                 let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
                 dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                    UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade)
+                    UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
                     
                     //发通知
                     let time1 = dispatch_time(DISPATCH_TIME_NOW,Int64(0.5 * Double(NSEC_PER_SEC)))
@@ -59,17 +55,11 @@ class ADViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view .addSubview(backImageView)
-        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
         
         //从网络获取数据， 并将获取的广告图片显示出来
         if let path = NSBundle.mainBundle().pathForResource("AD", ofType: nil){
             weak var tmpSelf = self
             ADModel.loadDataFromFile(path) { ( data,  e) -> Void in
-                
-                if e != nil {
-                    print("\(e)")
-                    return
-                }
                 
                 let adModel = data as? ADModel
                 if adModel?.data?.img_name != nil {

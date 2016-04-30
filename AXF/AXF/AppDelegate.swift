@@ -13,27 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         addNotification()
         
         setUpWindow()
         
-       return true
+        return true
     }
-
     
     func addNotification(){
-        //新手引导结束
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: GuideViewControllerDidFinish, object: nil)
-   
-        //广告显示结束
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: ADImageLoadFinished, object: nil)
-
     }
     
     func setUpWindow(){
+        
         self.window = UIWindow(frame: ScreenBounds)
         self.window!.makeKeyAndVisible()
         
@@ -49,24 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: -通知响应
     func showMainTabBarVC(noteInfo: NSNotification){
         if noteInfo.name == GuideViewControllerDidFinish{
-            
              self.window?.rootViewController = HEMainTabBarController()
-            
         }else if noteInfo.name == ADImageLoadFinished{
             if let image = noteInfo.userInfo?["image"] as? UIImage{
                 
-                self.window?.rootViewController = HEMainTabBarController()
-                
+                let vc = HEMainTabBarController()
+                vc.adImage = image
+                self.window?.rootViewController = vc
             }else{ //广告加载失败了
-                
                  self.window?.rootViewController = HEMainTabBarController()
-                
             }
         }
     }
-    
-    
-    
     
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
