@@ -23,4 +23,5 @@ public let AXFTextBlackColor = UIColor.colorWithCustom(50, g: 50, b: 50)
 
 // MARK: -通知
 public let GuideViewControllerDidFinish = "GuideViewControllerDidFinish"
+public let ADImageLoadFinished =  "ADImageLoadFinished"
 

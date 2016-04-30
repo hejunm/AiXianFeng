@@ -8,29 +8,21 @@
 
 import Foundation
 
-class ADModel : ParentAD,DictModelProtocol{
+class ADModel: NSObject{
     var code = -1
     var msg: String?
-    var ad:[AD]?
-    
-    static func customClassMapping() -> [String: String]?{
-        return ["ad":"AD"];
-    }
+    var data:AD?
 }
 
 class AD:NSObject {
-    var title_AD:String?
-    init(title:String) {
-        title_AD = title
-    }
-    override init() {
-        
-    }
+    var title:String?
+    var img_name:String?
+    var img_big_name:String?
+    var img_url:String?
+    var starttime:String?
+    var endtime:String?
 }
 
-class ParentAD:NSObject{
-    var parentVar1:String?
-}
 
 
 
