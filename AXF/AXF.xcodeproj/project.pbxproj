@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		232C6B981CCE507700E7A55D /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6B971CCE507600E7A55D /* ADModel.swift */; };
+		236E5D581CD6233900CAC850 /* HEAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E5D571CD6233900CAC850 /* HEAnimationController.swift */; };
+		236E5D5A1CD626F200CAC850 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E5D591CD626F200CAC850 /* UIView+Extention.swift */; };
+		236E5D5C1CD62FBE00CAC850 /* HESelectedAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E5D5B1CD62FBE00CAC850 /* HESelectedAdressViewController.swift */; };
+		236E5D611CD637EF00CAC850 /* HEButtonForNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E5D601CD637EF00CAC850 /* HEButtonForNavigationItem.swift */; };
+		236E5D631CD63B9900CAC850 /* UIBarButtonItem+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E5D621CD63B9900CAC850 /* UIBarButtonItem+Extention.swift */; };
 		2372C66A1CD44BAE0052E72F /* HEMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372C6691CD44BAE0052E72F /* HEMainTabBarController.swift */; };
-		2383005E1CCDBBAD00864F7F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383005A1CCDBBAD00864F7F /* BaseViewController.swift */; };
 		238300611CCDBC3A00864F7F /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300601CCDBC3A00864F7F /* UIColor+Extention.swift */; };
 		238300661CCDBFD200864F7F /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300651CCDBFD200864F7F /* GuideViewController.swift */; };
 		238300681CCDC9B800864F7F /* GuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300671CCDC9B800864F7F /* GuideCell.swift */; };
@@ -55,12 +59,19 @@
 		2390FCA31CD3601F00FCE09F /* HEAnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2390FCA21CD3601F00FCE09F /* HEAnimationTabBarController.swift */; };
 		239660F31CCCED2700113951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239660F21CCCED2700113951 /* AppDelegate.swift */; };
 		239660FA1CCCED2700113951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239660F91CCCED2700113951 /* Assets.xcassets */; };
+		239889801CD4955500902BB1 /* HEBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398897F1CD4955500902BB1 /* HEBaseNavigationController.swift */; };
+		239889831CD498BB00902BB1 /* HEHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239889821CD498BB00902BB1 /* HEHomeViewController.swift */; };
+		239889851CD4996900902BB1 /* HEBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239889841CD4996900902BB1 /* HEBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		232C6B971CCE507600E7A55D /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
+		236E5D571CD6233900CAC850 /* HEAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAnimationController.swift; sourceTree = "<group>"; };
+		236E5D591CD626F200CAC850 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		236E5D5B1CD62FBE00CAC850 /* HESelectedAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESelectedAdressViewController.swift; sourceTree = "<group>"; };
+		236E5D601CD637EF00CAC850 /* HEButtonForNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEButtonForNavigationItem.swift; sourceTree = "<group>"; };
+		236E5D621CD63B9900CAC850 /* UIBarButtonItem+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extention.swift"; sourceTree = "<group>"; };
 		2372C6691CD44BAE0052E72F /* HEMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMainTabBarController.swift; sourceTree = "<group>"; };
-		2383005A1CCDBBAD00864F7F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		238300601CCDBC3A00864F7F /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		238300651CCDBFD200864F7F /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		238300671CCDC9B800864F7F /* GuideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideCell.swift; sourceTree = "<group>"; };
@@ -126,6 +137,9 @@
 		239660F21CCCED2700113951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239660F91CCCED2700113951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		239660FE1CCCED2700113951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2398897F1CD4955500902BB1 /* HEBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEBaseNavigationController.swift; sourceTree = "<group>"; };
+		239889821CD498BB00902BB1 /* HEHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHomeViewController.swift; sourceTree = "<group>"; };
+		239889841CD4996900902BB1 /* HEBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +153,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236E5D5F1CD6379400CAC850 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				236E5D601CD637EF00CAC850 /* HEButtonForNavigationItem.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		238300581CCDBBAD00864F7F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				239889811CD4989200902BB1 /* Home */,
 				2390FCA11CD35FDD00FCE09F /* Main */,
 				238300591CCDBBAD00864F7F /* Base */,
 				238300641CCDBFD200864F7F /* Guide */,
@@ -154,7 +177,6 @@
 		238300591CCDBBAD00864F7F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				2383005A1CCDBBAD00864F7F /* BaseViewController.swift */,
 				2383006F1CCDFAC200864F7F /* Config.swift */,
 				238300711CCDFACD00864F7F /* Libs */,
 				2383006A1CCDF51900864F7F /* Tools */,
@@ -168,6 +190,8 @@
 			children = (
 				238300601CCDBC3A00864F7F /* UIColor+Extention.swift */,
 				2383006D1CCDF8C800864F7F /* UIDevice+Extention.swift */,
+				236E5D591CD626F200CAC850 /* UIView+Extention.swift */,
+				236E5D621CD63B9900CAC850 /* UIBarButtonItem+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -283,8 +307,13 @@
 		2390FCA11CD35FDD00FCE09F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				236E5D5F1CD6379400CAC850 /* CustomView */,
+				239889841CD4996900902BB1 /* HEBaseViewController.swift */,
 				2390FCA21CD3601F00FCE09F /* HEAnimationTabBarController.swift */,
 				2372C6691CD44BAE0052E72F /* HEMainTabBarController.swift */,
+				2398897F1CD4955500902BB1 /* HEBaseNavigationController.swift */,
+				236E5D571CD6233900CAC850 /* HEAnimationController.swift */,
+				236E5D5B1CD62FBE00CAC850 /* HESelectedAdressViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -315,6 +344,14 @@
 				239660FE1CCCED2700113951 /* Info.plist */,
 			);
 			path = AXF;
+			sourceTree = "<group>";
+		};
+		239889811CD4989200902BB1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				239889821CD498BB00902BB1 /* HEHomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,21 +451,28 @@
 				238300A31CCDFAFD00864F7F /* UIView+WebCacheOperation.m in Sources */,
 				238300A01CCDFAFD00864F7F /* UIImage+WebP.m in Sources */,
 				238300611CCDBC3A00864F7F /* UIColor+Extention.swift in Sources */,
+				239889831CD498BB00902BB1 /* HEHomeViewController.swift in Sources */,
 				238300A11CCDFAFD00864F7F /* UIImageView+HighlightedWebCache.m in Sources */,
+				236E5D5C1CD62FBE00CAC850 /* HESelectedAdressViewController.swift in Sources */,
 				2383006E1CCDF8C800864F7F /* UIDevice+Extention.swift in Sources */,
+				239889851CD4996900902BB1 /* HEBaseViewController.swift in Sources */,
 				239660F31CCCED2700113951 /* AppDelegate.swift in Sources */,
 				2383009D1CCDFAFD00864F7F /* UIButton+WebCache.m in Sources */,
+				236E5D631CD63B9900CAC850 /* UIBarButtonItem+Extention.swift in Sources */,
 				2383009C1CCDFAFD00864F7F /* SDWebImagePrefetcher.m in Sources */,
 				2383009A1CCDFAFD00864F7F /* SDWebImageDownloaderOperation.m in Sources */,
 				238300661CCDBFD200864F7F /* GuideViewController.swift in Sources */,
+				236E5D5A1CD626F200CAC850 /* UIView+Extention.swift in Sources */,
 				232C6B981CCE507700E7A55D /* ADModel.swift in Sources */,
 				2390FCA31CD3601F00FCE09F /* HEAnimationTabBarController.swift in Sources */,
 				238300681CCDC9B800864F7F /* GuideCell.swift in Sources */,
+				236E5D581CD6233900CAC850 /* HEAnimationController.swift in Sources */,
+				239889801CD4955500902BB1 /* HEBaseNavigationController.swift in Sources */,
 				2383009F1CCDFAFD00864F7F /* UIImage+MultiFormat.m in Sources */,
 				238300701CCDFAC200864F7F /* Config.swift in Sources */,
 				238300961CCDFAFD00864F7F /* SDImageCache.m in Sources */,
+				236E5D611CD637EF00CAC850 /* HEButtonForNavigationItem.swift in Sources */,
 				2383006C1CCDF52E00864F7F /* ADViewController.swift in Sources */,
-				2383005E1CCDBBAD00864F7F /* BaseViewController.swift in Sources */,
 				2383009E1CCDFAFD00864F7F /* UIImage+GIF.m in Sources */,
 				238300991CCDFAFD00864F7F /* SDWebImageDownloader.m in Sources */,
 				2372C66A1CD44BAE0052E72F /* HEMainTabBarController.swift in Sources */,

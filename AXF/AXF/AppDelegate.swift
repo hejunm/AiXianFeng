@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        setAppSubject()
+        
         addNotification()
         
         setUpWindow()
@@ -47,7 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              self.window?.rootViewController = HEMainTabBarController()
         }else if noteInfo.name == ADImageLoadFinished{
             if let image = noteInfo.userInfo?["image"] as? UIImage{
-                
                 let vc = HEMainTabBarController()
                 vc.adImage = image
                 self.window?.rootViewController = vc
@@ -55,6 +56,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  self.window?.rootViewController = HEMainTabBarController()
             }
         }
+    }
+    
+    // MARK:- privete Method
+    // MARK:主题设置
+    private func setAppSubject() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        
+        let navBarnAppearance = UINavigationBar.appearance()
+        navBarnAppearance.translucent = false
     }
     
     deinit{

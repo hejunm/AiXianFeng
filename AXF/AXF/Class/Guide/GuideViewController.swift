@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GuideViewController: BaseViewController {
+class GuideViewController: HEBaseViewController {
     
     
     private var collectionView:UICollectionView?

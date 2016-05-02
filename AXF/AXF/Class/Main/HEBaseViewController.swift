@@ -8,15 +8,8 @@
 
 import UIKit
 
-class BaseViewController :UIViewController {
+class HEBaseViewController :UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.view.backgroundColor = AXFGlobalBackgroundColor;
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated);
-    }
-    
-    
 }

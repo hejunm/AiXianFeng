@@ -74,9 +74,7 @@ extension NSObject{
                             }
                         }
                     }
-                    
                 }
-                
               obj.setValue(value, forKey: propertyKey)
             }
             free(properties)                            //释放内存
@@ -126,13 +124,11 @@ extension NSObject{
         }
         do{
            let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-           
             if let model = objectWithKeyValues(dict as? NSDictionary){
                 completion(data: model, error: nil)
             }else{
                 completion(data: nil, error: NSError(domain: "转换失败", code: -1, userInfo: nil))
             }
-            
         }catch {
             completion(data: nil, error: NSError(domain: "不能得到 JSONObject", code: -1, userInfo: nil))
         }

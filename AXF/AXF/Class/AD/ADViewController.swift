@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ADViewController: BaseViewController {
+class ADViewController: HEBaseViewController {
     
     private lazy var backImageView:UIImageView = UIImageView(frame: ScreenBounds)
     
@@ -45,12 +45,10 @@ class ADViewController: BaseViewController {
                     dispatch_after(time1, dispatch_get_main_queue(), { () -> Void in
                          NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFinished, object: nil, userInfo: ["image":image])
                     })
-                    
                 })
             }
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +58,6 @@ class ADViewController: BaseViewController {
         if let path = NSBundle.mainBundle().pathForResource("AD", ofType: nil){
             weak var tmpSelf = self
             ADModel.loadDataFromFile(path) { ( data,  e) -> Void in
-                
                 let adModel = data as? ADModel
                 if adModel?.data?.img_name != nil {
                     tmpSelf!.imageName = adModel?.data?.img_name!
