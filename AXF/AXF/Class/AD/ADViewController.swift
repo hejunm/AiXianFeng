@@ -54,14 +54,10 @@ class ADViewController: HEBaseViewController {
         super.viewDidLoad()
         self.view .addSubview(backImageView)
         
-        //从网络获取数据， 并将获取的广告图片显示出来
-        if let path = NSBundle.mainBundle().pathForResource("AD", ofType: nil){
-            weak var tmpSelf = self
-            ADModel.loadDataFromFile(path) { ( data,  e) -> Void in
-                let adModel = data as? ADModel
-                if adModel?.data?.img_name != nil {
-                    tmpSelf!.imageName = adModel?.data?.img_name!
-                }
+        weak var tmpSelf = self
+        ADModel.loadData { (data, error) -> Void in
+            if data?.data?.img_name != nil {
+                tmpSelf!.imageName = data?.data?.img_name!
             }
         }
     }

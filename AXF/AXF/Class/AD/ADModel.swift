@@ -12,6 +12,21 @@ class ADModel: NSObject{
     var code = -1
     var msg: String?
     var data:AD?
+    
+    class func loadData(result:(data: ADModel!, error: NSError!)->Void) {
+        
+        if let path = NSBundle.mainBundle().pathForResource("AD", ofType: nil){
+            ADModel.loadDataFromFile(path) { ( data,  e) -> Void in
+                let adModel = data as? ADModel
+                if adModel == nil {
+                    result(data: nil, error: NSError(domain: "文件不存在", code: -1, userInfo: nil))
+                    return
+                }
+                result(data: adModel, error: NSError(domain: "文件不存在", code: -1, userInfo: nil))
+            }
+        }
+    
+    }
 }
 
 class AD:NSObject {

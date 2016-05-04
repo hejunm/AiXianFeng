@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: -通知响应
     func showMainTabBarVC(noteInfo: NSNotification){
         if noteInfo.name == GuideViewControllerDidFinish{
+            
+            UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
+            
              self.window?.rootViewController = HEMainTabBarController()
         }else if noteInfo.name == ADImageLoadFinished{
             if let image = noteInfo.userInfo?["image"] as? UIImage{
