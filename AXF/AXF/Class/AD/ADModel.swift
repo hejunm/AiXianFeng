@@ -22,7 +22,7 @@ class ADModel: NSObject{
                     result(data: nil, error: NSError(domain: "文件不存在", code: -1, userInfo: nil))
                     return
                 }
-                result(data: adModel, error: NSError(domain: "文件不存在", code: -1, userInfo: nil))
+                result(data: adModel, error: nil)
             }
         }
     

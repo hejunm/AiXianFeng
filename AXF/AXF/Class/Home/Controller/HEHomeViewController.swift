@@ -12,51 +12,65 @@ class HEHomeViewController: HESelectedAdressViewController {
     
     var collectionView:HEHomeCollectionView!
     var headerView:UIView!
-    
+   
+// MARK: --初始化
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         buildCollectionView()
-        
-        buildHeaderTableView()
-        
-        
+        buildNotificaton()
+        loadData()
     }
     
-    private func buildHeaderTableView(){
-        headerView = UIView(frame: CGRectMake(0, 0, ScreenWidth, -100))
-        headerView.backgroundColor = UIColor.yellowColor()
-        collectionView.addSubview(headerView)
-        collectionView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
-        
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.headerView.pageScrollView.startTimer()
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        collectionView.headerView.pageScrollView.endTimer()
+    }
+
     private func buildCollectionView(){
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = HEHomeCollectionViewCellMargin
-        layout.minimumLineSpacing = HEHomeCollectionViewCellMargin
-        layout.sectionInset = UIEdgeInsets(top: 0, left: HEHomeCollectionViewCellMargin, bottom: 0, right: HEHomeCollectionViewCellMargin)
-        layout.headerReferenceSize = CGSizeMake(0, HEHomeCollectionViewCellMargin)
-        
-        collectionView = HEHomeCollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight-64), collectionViewLayout: layout)
+        collectionView = HEHomeCollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight-64), collectionViewLayout: nil)
+        collectionView.backgroundColor = HEGlobalBackgroundColor
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.backgroundColor = HEGlobalBackgroundColor
-        
-        let refreshHeadView = HERefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
-        refreshHeadView.gifView?.frame = CGRectMake(0, 30, 100, 100)
-        collectionView.mj_header = refreshHeadView
-
-        self.view .addSubview(collectionView)
+        self.view.addSubview(collectionView)
+    }
+    
+    private func buildNotificaton(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fouceImageClick:",name:HEHomeViewControllerForceImageClick , object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "iconClick:",name:HEHomeViewControllerIconClick , object: nil)
+    }
+    
+    private func loadData(){
+        //1, 获取头部数据： 滚动，icon，活动
+        weak var tempSelf = self
+        HeadResources.loadData { (data, error) -> Void in
+            if let headerData = data.data{
+                tempSelf!.collectionView.headerView.data = headerData
+            }
+        }
+    }
+    
+//MARK: --事件
+    func fouceImageClick(noti:NSNotification){
+        print(noti)
+    }
+    
+    func iconClick(noti:NSNotification){
+        print(noti)
+    }
+    
+//MARK: --销毁
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }
 
-//MARK: 事件处理
-func headRefresh(){
-    
-}
-
+//MARK:  --代理
 extension HEHomeViewController:UICollectionViewDataSource,UICollectionViewDelegate{
     
     //MARK:--UICollectionViewDataSource
@@ -75,7 +89,6 @@ extension HEHomeViewController:UICollectionViewDataSource,UICollectionViewDelega
     }
     
     //MARK: --UICollectionViewDelegate
-    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         var itemSize = CGSizeZero
         if indexPath.section == 0 {

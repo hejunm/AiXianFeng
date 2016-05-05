@@ -28,6 +28,13 @@ public let HENavigationTextViewFont = UIFont.systemFontOfSize(10)
 public let GuideViewControllerDidFinish = "GuideViewControllerDidFinish"
 public let ADImageLoadFinished =  "ADImageLoadFinished"
 
+public let HEHomeViewControllerForceImageClick = "HEHomeViewControllerForceImageClick"  //点击了轮播图片
+public let HEHomeViewControllerIconClick = "HEHomeViewControllerIconClick"              //首页icon
+public let HEHomeHeaderViewHeightChanged = "HEHomeHeaderViewHeightChanged"              //首页头部高度改变
+
+
+
+
 // MARK: - Home 属性
 public let HEHotViewMargin: CGFloat = 10
 public let HEHomeCollectionViewCellMargin: CGFloat = 8
