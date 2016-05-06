@@ -11,7 +11,6 @@ import UIKit
 class HEHomeCollectionView: UICollectionView {
     
     var headerView:HEHomeHeaderView!  //循环滚动视图和icon试图
-    var refreshHeadView:HERefreshHeader!
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout?) {
         
@@ -24,9 +23,6 @@ class HEHomeCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
         
         buildHeaderView()
-        buildRefreshView()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setHeaderViewHeight:", name: HEHomeHeaderViewHeightChanged, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,28 +32,5 @@ class HEHomeCollectionView: UICollectionView {
     private func buildHeaderView(){
         headerView = HEHomeHeaderView()
         addSubview(headerView)
-    }
-    
-    private func buildRefreshView(){
-        refreshHeadView = HERefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
-        header = refreshHeadView
-    }
-    
-    //MARK: --事件
-    func setHeaderViewHeight(noti: NSNotification){
-        
-        if let h = noti.userInfo?["height"] as? NSString{
-            let hFloat = CGFloat(h.floatValue)
-            
-            headerView.frame =  CGRectMake(0, -hFloat, ScreenWidth, hFloat)
-            contentInset = UIEdgeInsets(top: headerView.height, left: 0, bottom: 0, right: 0)
-            setContentOffset(CGPoint(x: 0, y: -(contentInset.top)), animated: false)
-            
-            refreshHeadView.ignoredScrollViewContentInsetTop = headerView.height
-        }
-    }
-    
-    deinit{
-        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }

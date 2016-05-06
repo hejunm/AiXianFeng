@@ -11,24 +11,15 @@ import UIKit
 class HEHomeViewController: HESelectedAdressViewController {
     
     var collectionView:HEHomeCollectionView!
-    var headerView:UIView!
+    var refreshHeadView:HERefreshHeader!    //下拉刷新
    
 // MARK: --初始化
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildCollectionView()
         buildNotificaton()
-        loadData()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        collectionView.headerView.pageScrollView.startTimer()
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        collectionView.headerView.pageScrollView.endTimer()
+        buildCollectionView()
+        buildRefreshView()
+        headRefresh()
     }
 
     private func buildCollectionView(){
@@ -43,25 +34,57 @@ class HEHomeViewController: HESelectedAdressViewController {
     private func buildNotificaton(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "fouceImageClick:",name:HEHomeViewControllerForceImageClick , object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "iconClick:",name:HEHomeViewControllerIconClick , object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setHeaderViewHeight:", name: HEHomeHeaderViewHeightChanged, object: nil) //collection中的header高度确定后,设置
     }
     
-    private func loadData(){
+    private func buildRefreshView(){
+        refreshHeadView = HERefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
+        collectionView.header = refreshHeadView
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) { //开始自动轮播
+        super.viewDidAppear(animated)
+        collectionView.headerView.pageScrollView.startTimer()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        collectionView.headerView.pageScrollView.endTimer() //结束自动轮播
+    }
+    
+//MARK: --事件
+    func headRefresh(){
         //1, 获取头部数据： 滚动，icon，活动
         weak var tempSelf = self
         HeadResources.loadData { (data, error) -> Void in
             if let headerData = data.data{
+                if tempSelf!.refreshHeadView.isRefreshing() {
+                    tempSelf!.refreshHeadView.endRefreshing()
+                }
+                
                 tempSelf!.collectionView.headerView.data = headerData
             }
         }
     }
     
-//MARK: --事件
     func fouceImageClick(noti:NSNotification){
         print(noti)
     }
     
     func iconClick(noti:NSNotification){
         print(noti)
+    }
+    
+    func setHeaderViewHeight(noti: NSNotification){
+        if let h = noti.userInfo?["height"] as? NSString{
+            let hFloat = CGFloat(h.floatValue)
+            
+            collectionView.headerView.frame =  CGRectMake(0, -hFloat, ScreenWidth, hFloat)
+            collectionView.contentInset = UIEdgeInsets(top: collectionView.headerView.height, left: 0, bottom: 0, right: 0)
+            collectionView.setContentOffset(CGPoint(x: 0, y: -(collectionView.contentInset.top)), animated: false)
+            refreshHeadView.ignoredScrollViewContentInsetTop = hFloat
+        }
     }
     
 //MARK: --销毁
