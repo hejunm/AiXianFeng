@@ -65,6 +65,6 @@ class HEIconTitleView: UIView {
     
     //MARK: --事件
     func iconClick(){
-        NSNotificationCenter.defaultCenter().postNotificationName(HEHomeViewControllerIconClick, object: nil, userInfo: ["icons":activity])
+        NSNotificationCenter.defaultCenter().postNotificationName(HEHomeViewControllerIconClick, object: nil, userInfo: ["icon":activity])
     }
 }

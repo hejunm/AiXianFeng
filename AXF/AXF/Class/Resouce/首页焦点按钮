@@ -142,6 +142,7 @@
 {
 "id": "20575",
 "name": "年货大集",
+"customURL":"http://www.sfbest.com/html/zt/xianguoxinyu/index.html?device=2",
 "img": "http://img01.bqstatic.com/upload/activity/activity_v4_20575_1452217080_focus.jpg@90Q",
 "topimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20575_1452217080_top.jpg@90Q",
 "jptype": "1",
@@ -158,6 +159,7 @@
 {
 "id": "20597",
 "name": "年货万人团",
+"customURL":"http://www.sfbest.com/html/zt/aozhoufeiniu02/index.html?device=2",
 "img": "http://img01.bqstatic.com/upload/activity/activity_v4_20597_1452325598_focus.jpg@90Q",
 "topimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20597_1452325598_top.jpg@90Q",
 "jptype": "1",
@@ -174,6 +176,7 @@
 {
 "id": "20629",
 "name": "此乐事非彼乐视",
+"customURL":"http://www.sfbest.com/html/zt/PURAmilk/index.html?device=2",
 "img": "http://img01.bqstatic.com/upload/activity/activity_v4_20629_1452324053_focus.jpg@90Q",
 "topimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20629_1452324053_top.jpg@90Q",
 "jptype": "1",
@@ -190,6 +193,7 @@
 {
 "id": "20624",
 "name": "今时代果粒酸奶 新品上市",
+"customURL":"http://m.sfbest.com/special/2-5971-2-52-500.html",
 "img": "http://img01.bqstatic.com/upload/activity/activity_v4_20624_1452392276_focus.jpg@90Q",
 "topimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20624_1452392276_top.jpg@90Q",
 "jptype": "1",
@@ -206,6 +210,7 @@
 {
 "id": "20537",
 "name": "年终奖提前发",
+"customURL":"http://www.sfbest.com/html/zt/faguoweidao/index.html?device=2",
 "img": "http://img01.bqstatic.com/upload/activity/activity_v4_20537_1452476149_focus.jpg@90Q",
 "topimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20537_1452476149_top.jpg@90Q",
 "jptype": "1",
@@ -307,7 +312,7 @@
 "hide_cart": "0",
 "trackid": "focus1|20575",
 "mimg": "http://img01.bqstatic.com/upload/activity/activity_v4_20575_1452217080_mblock.jpg@90Q",
-"customURL": "https://github.com/ZhongTaoTian"
+"customURL": "http://www.jianshu.com/users/6324fa693259/latest_articles"
 },
 {
 "id": "20626",
@@ -325,7 +330,7 @@
 "show_reload": "1",
 "hide_cart": "0",
 "trackid": "act1|20626",
-"customURL": "http://weibo.com/tianzhongtao"
+"customURL": "http://www.jianshu.com/users/6324fa693259/latest_articles"
 },
 {
 "id": "20580",
@@ -343,7 +348,7 @@
 "show_reload": "1",
 "hide_cart": "0",
 "trackid": "act1|20580",
-"customURL": "http://www.jianshu.com/users/5fe7513c7a57/latest_articles"
+"customURL": "http://www.jianshu.com/users/6324fa693259/latest_articles"
 },
 {
 "id": "20581",
@@ -361,7 +366,7 @@
 "show_reload": "1",
 "hide_cart": "0",
 "trackid": "act1|20581",
-"customURL": "http://www.jianshu.com/users/5fe7513c7a57/latest_articles"
+"customURL": "http://www.jianshu.com/users/6324fa693259/latest_articles"
 }
 ],
 "cart_ids": [],

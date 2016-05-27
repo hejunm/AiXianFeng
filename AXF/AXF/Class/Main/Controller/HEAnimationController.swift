@@ -55,4 +55,11 @@ class HEAnimationController: HEBaseViewController {
             animationLayers.removeFirst()
         }
     }
+    
+    func cleanAllAnimationLayers(){
+        for layer in animationLayers{
+            layer.removeFromSuperlayer()
+        }
+        animationLayers.removeAll()
+    }
 }

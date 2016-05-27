@@ -24,6 +24,7 @@ class HEHotView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        width = ScreenWidth
         self.backgroundColor = UIColor.whiteColor()
     }
     
@@ -39,11 +40,6 @@ class HEHotView: UIView {
             iconView.activity = icons[i]
             addSubview(iconView)
         }
-        setNeedsLayout()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
         
         var h:CGFloat = 0
         if icons != nil {
@@ -54,8 +50,6 @@ class HEHotView: UIView {
             }
         }
         height = h
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(HEHomeHeaderViewHeightChanged, object: nil, userInfo: ["height":"\(CGRectGetMaxY(self.frame))"])
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -24,15 +24,24 @@ class HEHomeHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        pageScrollView = HEPageScrollView(frame: CGRectMake(0, 0, ScreenWidth, ScreenWidth*0.31))
+        pageScrollView = HEPageScrollView()
         addSubview(pageScrollView)
         
-        //这里的高度是随意指定的， 在后面需要修改
-        hotView = HEHotView(frame: CGRectMake(0, pageScrollView.height, ScreenWidth, 0))
+        hotView = HEHotView()
         addSubview(hotView)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        pageScrollView.frame = CGRectMake(0, 0, ScreenWidth, ScreenWidth*0.31)
+        hotView.frame.origin = CGPointMake(0, CGRectGetMaxY(pageScrollView.frame))
+        let h = CGRectGetMaxY(hotView.frame)
+        
+        frame = CGRectMake(0, -h, ScreenWidth, h)
+        NSNotificationCenter.defaultCenter().postNotificationName(HEHomeHeaderViewHeightChanged, object: nil, userInfo: ["height":"\(h)"])
     }
 }

@@ -23,7 +23,8 @@ class HEPageScrollView: UIView {
             pageControl.numberOfPages = focus.count
             pageControl.currentPage = 0
             setNeedsLayout()
-            updata()
+            
+            updata() //始终使用中间的UIImageView 进行显示
             startTimer()
         }
     }
@@ -41,16 +42,14 @@ class HEPageScrollView: UIView {
     func buildScrollView(){           //只需要三个就可以实现所有的轮播
         scrollView = UIScrollView()
         scrollView.delegate = self
-        scrollView.frame = self.bounds
         scrollView.pagingEnabled = true
         scrollView.bounces = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.contentSize = CGSizeMake(width * CGFloat(maxFocusCount), height)
         addSubview(scrollView)
         
-        for i in 0..<maxFocusCount{
-            let imageView = ForceImageView(frame: CGRectMake(CGFloat(i)*width, 0, width, height))
+        for _ in 0..<maxFocusCount{
+            let imageView = ForceImageView(frame: CGRectZero)
             imageView.contentMode = .ScaleAspectFill
             scrollView.addSubview(imageView)
         }
@@ -64,9 +63,15 @@ class HEPageScrollView: UIView {
         addSubview(pageControl)
     }
     
-    override func layoutSubviews() {
+    override func layoutSubviews() { //当设置pageScrollView的frame时， 就会调用这个方法
         super.layoutSubviews()
-        
+        scrollView.frame = bounds
+        scrollView.contentSize = CGSizeMake(width * CGFloat(maxFocusCount), height)
+        if let imageViews = scrollView.subviews as? [ForceImageView]{
+            for (i,imageView) in imageViews.enumerate(){
+                imageView.frame = CGRectMake(CGFloat(i)*width, 0, width, height)
+            }
+        }
         let pageControlSize = pageControl.sizeForNumberOfPages(pageControl.numberOfPages)
         pageControl.frame = CGRectMake(width-pageControlSize.width-10, height-pageControlSize.height, pageControlSize.width, pageControlSize.height)
     }

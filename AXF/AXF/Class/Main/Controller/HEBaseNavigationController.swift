@@ -19,22 +19,9 @@ class HEBaseNavigationController: UINavigationController {
     override func pushViewController(viewController: UIViewController, animated: Bool) {
         if childViewControllers.count > 0{
             viewController.hidesBottomBarWhenPushed = true
-            viewController.navigationItem.leftBarButtonItem = getCustomBarButtonItem()
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.backBarButtonItem(self, action:"backBtnClick")
         }
         super.pushViewController(viewController, animated: animated)
-    }
-    
-    private func getCustomBarButtonItem()->UIBarButtonItem{
-        
-        let backBtn = UIButton(type: UIButtonType.Custom)
-        backBtn.setImage(UIImage(named: "v2_goback"), forState: .Normal)
-        backBtn.titleLabel?.hidden = true
-        backBtn.addTarget(self, action: "backBtnClick", forControlEvents: .TouchUpInside)
-        backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
-        let btnW: CGFloat = ScreenWidth > 375.0 ? 50 : 44
-        backBtn.frame = CGRectMake(0, 0, btnW, 40)
-        return UIBarButtonItem(customView: backBtn)
     }
     
     func backBtnClick(){

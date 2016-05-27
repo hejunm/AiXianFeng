@@ -10,27 +10,38 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         setAppSubject()
-        
         addNotification()
-        
         setUpWindow()
-        
         return true
     }
     
-    func addNotification(){
+    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+        print("applicationDidReceiveMemoryWarning")
+        SDImageCache.sharedImageCache().clearMemory()
+    }
+    
+    // MARK:- privete Method
+    
+    //设置主题
+    private func setAppSubject() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        
+        let navBarnAppearance = UINavigationBar.appearance()
+        navBarnAppearance.translucent = false
+    }
+    //设置通知
+    private func addNotification(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: GuideViewControllerDidFinish, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: ADImageLoadFinished, object: nil)
     }
-    
-    func setUpWindow(){
-        
+    //设置窗体
+    private func setUpWindow(){
         self.window = UIWindow(frame: ScreenBounds)
         self.window!.makeKeyAndVisible()
         
@@ -42,35 +53,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = ADViewController()
         }
     }
-    
-    //MARK: -通知响应
+    //-通知响应
     func showMainTabBarVC(noteInfo: NSNotification){
         if noteInfo.name == GuideViewControllerDidFinish{
-            
             UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
-            
-             self.window?.rootViewController = HEMainTabBarController()
+            self.window?.rootViewController = HEMainTabBarController()
         }else if noteInfo.name == ADImageLoadFinished{
             if let image = noteInfo.userInfo?["image"] as? UIImage{
                 let vc = HEMainTabBarController()
                 vc.adImage = image
                 self.window?.rootViewController = vc
             }else{ //广告加载失败了
-                 self.window?.rootViewController = HEMainTabBarController()
+                self.window?.rootViewController = HEMainTabBarController()
             }
         }
     }
-    
-    // MARK:- privete Method
-    // MARK:主题设置
-    private func setAppSubject() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
-        let navBarnAppearance = UINavigationBar.appearance()
-        navBarnAppearance.translucent = false
-    }
-    
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }

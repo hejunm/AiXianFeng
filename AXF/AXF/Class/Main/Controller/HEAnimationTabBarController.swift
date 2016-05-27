@@ -131,12 +131,12 @@ class HEAnimationTabBarController: UITabBarController {
     }
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        
         selectItemFrom(selectedIndex, toIndex: item.tag)
     }
     
-    private func selectItemFrom(from:Int, toIndex:Int){
-        
+    
+    func selectItemFrom(from:Int, toIndex:Int){
+       
         let fromImageView = iconAndLabels[from].icon
         let toImageView =  iconAndLabels[toIndex].icon
         

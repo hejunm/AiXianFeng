@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HESelectedAdressViewController: UIViewController {
+class HESelectedAdressViewController: HEAnimationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

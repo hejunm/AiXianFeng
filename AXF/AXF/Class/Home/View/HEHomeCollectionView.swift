@@ -13,13 +13,11 @@ class HEHomeCollectionView: UICollectionView {
     var headerView:HEHomeHeaderView!  //循环滚动视图和icon试图
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout?) {
-        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = HEHomeCollectionViewCellMargin
         layout.minimumLineSpacing = HEHomeCollectionViewCellMargin
         layout.sectionInset = UIEdgeInsets(top: 0, left: HEHomeCollectionViewCellMargin, bottom: 0, right: HEHomeCollectionViewCellMargin)
         layout.headerReferenceSize = CGSizeMake(0, HEHomeCollectionViewCellMargin)
-        
         super.init(frame: frame, collectionViewLayout: layout)
         
         buildHeaderView()
@@ -32,5 +30,9 @@ class HEHomeCollectionView: UICollectionView {
     private func buildHeaderView(){
         headerView = HEHomeHeaderView()
         addSubview(headerView)
+    }
+
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }
