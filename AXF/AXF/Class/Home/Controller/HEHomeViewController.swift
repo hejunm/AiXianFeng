@@ -12,7 +12,7 @@ class HEHomeViewController: HESelectedAdressViewController{
 
 // MARK: --参数
     var collectionView:HEHomeCollectionView!
-    var refreshHeadView:HERefreshHeader!    //下拉刷新
+    var refreshHeadView:HEDynamicYRefreshHeader!    //下拉刷新
     var activities: [Activitie]?            //活动
     var freshHot :FreshHot?                 //新鲜热卖
     var isAnimation = false                //当向上滚动scrollView时，可以有动画
@@ -26,6 +26,15 @@ class HEHomeViewController: HESelectedAdressViewController{
         buildCollectionView()
         buildRefreshView()
         refreshHeadView.beginRefreshing()
+    }
+    override func viewDidAppear(animated: Bool) { //开始自动轮播
+        super.viewDidAppear(animated)
+        collectionView.headerView.pageScrollView.startTimer()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        collectionView.headerView.pageScrollView.endTimer() //结束自动轮播
     }
     
     private func buildCollectionView(){
@@ -46,21 +55,9 @@ class HEHomeViewController: HESelectedAdressViewController{
     }
     
     private func buildRefreshView(){
-        refreshHeadView = HERefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
+        refreshHeadView = HEDynamicYRefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
         collectionView.header = refreshHeadView
     }
-    
-    
-    override func viewDidAppear(animated: Bool) { //开始自动轮播
-        super.viewDidAppear(animated)
-        collectionView.headerView.pageScrollView.startTimer()
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        collectionView.headerView.pageScrollView.endTimer() //结束自动轮播
-    }
-    
     //请求数据
     func headRefresh(){
         weak var tempSelf = self

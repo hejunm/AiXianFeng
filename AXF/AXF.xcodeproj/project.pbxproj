@@ -97,6 +97,7 @@
 		23A381421CDB7D7E001DA265 /* HEIconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A381411CDB7D7E001DA265 /* HEIconTitleView.swift */; };
 		23B8A95F1CF459B700E07007 /* HEWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8A95E1CF459B700E07007 /* HEWebViewController.swift */; };
 		23B8BD4E1CDAD4DF00FCDBB3 /* HEHotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BD4D1CDAD4DF00FCDBB3 /* HEHotView.swift */; };
+		23BCB3F01CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCB3EF1CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift */; };
 		23D396D81CD8EB8800AE005C /* HERefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D396D71CD8EB8800AE005C /* HERefreshHeader.swift */; };
 		23D5DD951CE5C39300048B51 /* HEBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5DD941CE5C39300048B51 /* HEBuyView.swift */; };
 		23D5DD9C1CE5DC1300048B51 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D5DD981CE5DC1300048B51 /* SVIndefiniteAnimatedView.m */; };
@@ -237,6 +238,7 @@
 		23A381411CDB7D7E001DA265 /* HEIconTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEIconTitleView.swift; sourceTree = "<group>"; };
 		23B8A95E1CF459B700E07007 /* HEWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEWebViewController.swift; sourceTree = "<group>"; };
 		23B8BD4D1CDAD4DF00FCDBB3 /* HEHotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHotView.swift; sourceTree = "<group>"; };
+		23BCB3EF1CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESuperMarketHeaderView.swift; sourceTree = "<group>"; };
 		23D396D71CD8EB8800AE005C /* HERefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HERefreshHeader.swift; sourceTree = "<group>"; };
 		23D5DD941CE5C39300048B51 /* HEBuyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEBuyView.swift; sourceTree = "<group>"; };
 		23D5DD971CE5DC1300048B51 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -516,8 +518,8 @@
 		2371E9041CF6DC4B00277B62 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2371E9051CF6DC4B00277B62 /* HEProductViewController.swift */,
 				2371E9061CF6DC4B00277B62 /* HESuperMarketViewController.swift */,
+				2371E9051CF6DC4B00277B62 /* HEProductViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,6 +537,7 @@
 			children = (
 				2371E90D1CF6E97D00277B62 /* HECategoryCell.swift */,
 				2371E90F1CF713E800277B62 /* HEProductCell.swift */,
+				23BCB3EF1CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				2311ADCC1CD9F4D40008CC74 /* MJRefreshBackNormalFooter.m in Sources */,
 				2311ADD01CD9F4D40008CC74 /* MJRefreshStateHeader.m in Sources */,
 				230EA8C41CD704DB005DD2FF /* SDWebImageManager.m in Sources */,
+				23BCB3F01CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift in Sources */,
 				2311ADE01CDA12C50008CC74 /* HEHomeViewController.swift in Sources */,
 				2371E8FC1CF6A38400277B62 /* HETableView.swift in Sources */,
 				230EA8C91CD704DB005DD2FF /* UIImage+WebP.m in Sources */,
@@ -907,6 +911,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AXF",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = AXF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -931,6 +936,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AXF",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = AXF/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

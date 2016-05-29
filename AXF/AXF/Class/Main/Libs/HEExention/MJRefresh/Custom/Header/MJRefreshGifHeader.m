@@ -86,7 +86,8 @@
         self.gifView.contentMode = UIViewContentModeCenter;
     } else {
         self.gifView.contentMode = UIViewContentModeRight;
-        self.gifView.mj_w = self.mj_w * 0.5 - 90;
+        //修改了原来是： self.mj_w * 0.5 - 90
+        self.gifView.mj_w = self.mj_w * 0.5 - 40;
     }
 }
 
