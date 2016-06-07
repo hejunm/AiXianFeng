@@ -37,6 +37,11 @@ class HEHomeViewController: HESelectedAdressViewController{
         collectionView.headerView.pageScrollView.endTimer() //结束自动轮播
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        //很费性能的， 每次都要刷新
+        collectionView.reloadData()
+    }
     private func buildCollectionView(){
         collectionView = HEHomeCollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight-NavigationH), collectionViewLayout: nil)
         collectionView.backgroundColor = HEGlobalBackgroundColor
@@ -50,12 +55,12 @@ class HEHomeViewController: HESelectedAdressViewController{
     }
     
     private func buildNotificaton(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fouceImageClick:",name:HEHomeViewControllerForceImageClick , object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "iconClick:",name:HEHomeViewControllerIconClick , object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HEHomeViewController.fouceImageClick(_:)),name:HEHomeViewControllerForceImageClick , object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HEHomeViewController.iconClick(_:)),name:HEHomeViewControllerIconClick , object: nil)
     }
     
     private func buildRefreshView(){
-        refreshHeadView = HEDynamicYRefreshHeader(refreshingTarget: self, refreshingAction: "headRefresh")
+        refreshHeadView = HEDynamicYRefreshHeader(refreshingTarget: self, refreshingAction: #selector(HEHomeViewController.headRefresh))
         collectionView.header = refreshHeadView
     }
     //请求数据
@@ -171,7 +176,7 @@ extension HEHomeViewController:UICollectionViewDataSource,UICollectionViewDelega
         let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", forIndexPath: indexPath) as! HEHomeCollectionFootView
         if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter{
             footerView.showLable()
-            let tap = UITapGestureRecognizer(target: self, action: "loadMoreGoods")
+            let tap = UITapGestureRecognizer(target: self, action: #selector(HEHomeViewController.loadMoreGoods))
             footerView.addGestureRecognizer(tap)
         }else{
             footerView.hideLabel()
@@ -218,23 +223,23 @@ extension HEHomeViewController:UICollectionViewDataSource,UICollectionViewDelega
         return CGSizeZero
     }
     
-    //添加动画
-    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-        if isAnimation && indexPath.section != 0{
-            cell.transform = CGAffineTransformMakeTranslation(0, 80)
-            UIView.animateWithDuration(0.8, animations: { () -> Void in
-                cell.transform = CGAffineTransformIdentity
-            })
-        }
-    }
-    func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 1{
-            view.transform = CGAffineTransformMakeTranslation(0, 60)
-            UIView.animateWithDuration(0.8, animations: { () -> Void in
-                view.transform = CGAffineTransformIdentity
-            })
-        }
-    }
+//    //添加动画
+//    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+//        if isAnimation && indexPath.section != 0{
+//            cell.transform = CGAffineTransformMakeTranslation(0, 80)
+//            UIView.animateWithDuration(0.8, animations: { () -> Void in
+//                cell.transform = CGAffineTransformIdentity
+//            })
+//        }
+//    }
+//    func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
+//        if indexPath.section == 1{
+//            view.transform = CGAffineTransformMakeTranslation(0, 60)
+//            UIView.animateWithDuration(0.8, animations: { () -> Void in
+//                view.transform = CGAffineTransformIdentity
+//            })
+//        }
+//    }
     
     // --UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {

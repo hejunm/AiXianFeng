@@ -10,6 +10,6 @@ import UIKit
 
 class HEBaseViewController :UIViewController {
     override func viewDidLoad() {
-        super.viewDidLoad();
+        super.viewDidLoad()
     }
 }

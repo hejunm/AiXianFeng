@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HEMainTabBarController: HEAnimationTabBarController {
+class HEMainTabBarController: HEAnimationTabBarController,UITabBarControllerDelegate{
     /**
      可以选择的控制器
      
@@ -30,7 +30,13 @@ class HEMainTabBarController: HEAnimationTabBarController {
         self.view.addSubview(imageView)
         return imageView
     }()
-
+    
+    //购物车对应导航控制器
+    lazy private var shopCarNavi:HEBaseNavigationController! = {
+        let shopCarVC = HEShopCarViewController()
+        return HEBaseNavigationController(rootViewController: shopCarVC)
+    }()
+    
     var adImage:UIImage?{
         didSet{
             if adImage != nil {
@@ -51,6 +57,7 @@ class HEMainTabBarController: HEAnimationTabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
         buildChildVCs()
     }
     
@@ -58,7 +65,7 @@ class HEMainTabBarController: HEAnimationTabBarController {
         addChildViewController(HEHomeViewController(), title: "首页", imageName: "v2_home", selectedImageName: "v2_home_r")
         addChildViewController(HESuperMarketViewController(), title: "闪电超市", imageName: "v2_order", selectedImageName: "v2_order_r")
         addChildViewController(UIViewController(), title: "购物车", imageName: "shopCart", selectedImageName: "shopCart")
-        addChildViewController(UIViewController(), title: "我的", imageName: "v2_my", selectedImageName: "v2_my_r")
+        addChildViewController(HEMineVC(), title: "我的", imageName: "v2_my", selectedImageName: "v2_my_r")
     }
     
     private func addChildViewController(vc:UIViewController,title:String,imageName:String,selectedImageName:String){
@@ -67,10 +74,17 @@ class HEMainTabBarController: HEAnimationTabBarController {
         self.addChildViewController(HEBaseNavigationController(rootViewController: vc))
     }
     
-    /**
-     切换到指定控制器
-     - parameter vc:
-     */
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        let childArr = tabBarController.childViewControllers as NSArray
+        let index = childArr.indexOfObject(viewController)
+        if index == 2 {
+            presentViewController(shopCarNavi, animated: true, completion: { }) //显示出导航控制器
+            return false
+        }
+        return true
+    }
+    
+    /**  切换到指定控制器  */
     func switchVC(vc:OptionalVC){
         let fromIndex = selectedIndex
         var toIndex :Int = 0

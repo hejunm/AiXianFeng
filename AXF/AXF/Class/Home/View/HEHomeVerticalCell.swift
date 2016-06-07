@@ -75,6 +75,8 @@ class HEHomeVerticalCell: UICollectionViewCell {
         buyView.addButtonClick = {()->() in
             if anim != nil{
                 anim(tmpSelf!.goodsImageView)
+                //在这里发送添加商品都购物车的通知
+                
             }
         }
     }

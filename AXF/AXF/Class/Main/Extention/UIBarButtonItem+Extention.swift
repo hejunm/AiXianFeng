@@ -21,10 +21,20 @@ extension UIBarButtonItem{
     class func customItemWith(title:String,normalTitleColor:UIColor,image:UIImage,highlightedImage:UIImage?,type:ItemButtonType,target:AnyObject?,action:Selector)->UIBarButtonItem{
         
         let btn:UIButton!
+        var offsetX:CGFloat = 0
         if type == .Left{
-            btn = HEButtonForLeftBarButtonItem()
+            btn = HEUpImageViewDownTitleLabelButton()
+            offsetX = -15
         }else{
-            btn = HEButtonForRightBarButtonItem()
+            btn = HEUpImageViewDownTitleLabelButton()
+            offsetX = 15
+        }
+        
+        if btn.imageView != nil{
+            btn.imageView!.x = btn.imageView!.x + offsetX
+        }
+        if btn.titleLabel != nil{
+            btn.titleLabel!.x = btn.titleLabel!.x + offsetX
         }
         btn.titleLabel?.font = UIFont.systemFontOfSize(10)
         btn.setTitle(title, forState: .Normal)
@@ -57,33 +67,4 @@ extension UIBarButtonItem{
         return UIBarButtonItem(customView: backBtn)
     }
     
-}
-
-
-
-class HEButtonForLeftBarButtonItem: UIButton {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let offset:CGFloat = 15
-        imageView?.frame = CGRectMake(-offset, 0, width, height - 15)
-        imageView?.contentMode = UIViewContentMode.Center
-        
-        titleLabel?.sizeToFit()
-        titleLabel?.frame = CGRectMake(-offset, height - 15, width, (titleLabel?.height)!)
-        titleLabel?.textAlignment = .Center
-    }
-}
-
-class HEButtonForRightBarButtonItem: UIButton {
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let offset:CGFloat = 15
-        imageView?.frame = CGRectMake(offset, 0, width, height - 15)
-        imageView?.contentMode = UIViewContentMode.Center
-        
-        titleLabel?.sizeToFit()
-        titleLabel?.frame = CGRectMake(offset, height - 15, width, (titleLabel?.height)!)
-        titleLabel?.textAlignment = .Center
-    }
 }

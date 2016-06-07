@@ -43,6 +43,12 @@ class HEProductViewController: HEAnimationController {
         buildRefreachHeader()
     }
     
+    /** 很费性能的*/
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        produceTableView.reloadData()
+    }
+    
     override func didMoveToParentViewController(parent: UIViewController?) {
         super.didMoveToParentViewController(parent)
         produceTableView.frame = view.bounds
@@ -63,7 +69,7 @@ class HEProductViewController: HEAnimationController {
     }
     
     private func buildRefreachHeader(){
-        refreshHeader = HERefreshHeader(refreshingTarget: self, refreshingAction: "loadDataAction")
+        refreshHeader = HERefreshHeader(refreshingTarget: self, refreshingAction: #selector(HEProductViewController.loadDataAction))
         produceTableView.header = refreshHeader
     }
     
@@ -129,8 +135,9 @@ extension HEProductViewController:UITableViewDelegate{
         isScrollDown =  lastScrollY > scrollView.contentOffset.y
         lastScrollY = scrollView.contentOffset.y
     }
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-        print("scrollViewDidEndScrollingAnimation")
-        //isScrollByDrag = true
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        isScrollByDrag = true
     }
+    
 }

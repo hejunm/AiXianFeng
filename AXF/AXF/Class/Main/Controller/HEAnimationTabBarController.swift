@@ -49,8 +49,6 @@ class BounceAnimation:NSObject,AnimationForTabBarProtocol {
     func selectedState(icon: UIImageView?, textLabel: UILabel?) {}
 }
 
-
-
 class HEAnimationTabBarController: UITabBarController {
     
     lazy var animationForTabBarItem:AnimationForTabBarProtocol =  BounceAnimation()
@@ -63,9 +61,7 @@ class HEAnimationTabBarController: UITabBarController {
         super.viewDidAppear(animated)
         if isFirstLoadThisController{
             if let items = self.tabBar.items{
-                
                 for (index,item) in items.enumerate(){
-                   
                     item.tag = index
                     
                     assert(item.image != nil, "add image icon in UITabBarItem")
@@ -75,6 +71,9 @@ class HEAnimationTabBarController: UITabBarController {
                     let viewContainer = createViewContainerAt(index)
                     createCustomIconsIn(viewContainer, item: item)
                     
+                    if index == 2{ //购物车上添加 显示badge的红圆点
+                        addShopCarRedDotView2(viewContainer)
+                    }
                     item.image = nil  //这样系统的就不会显示出来
                     item.title = nil
                     item.selectedImage = nil
@@ -85,7 +84,6 @@ class HEAnimationTabBarController: UITabBarController {
     }
     
     private func createViewContainerAt(index :Int) ->UIView{
-        
         let width:CGFloat = CGFloat(ScreenWidth) / CGFloat(self.tabBar.items!.count)
         let height:CGFloat = self.tabBar.bounds.height
         let container:UIView = UIView(frame: CGRectMake(width * CGFloat(index),0,width,height))
@@ -97,9 +95,7 @@ class HEAnimationTabBarController: UITabBarController {
     }
     
     private func createCustomIconsIn(viewContainer:UIView,item:UITabBarItem){
-        
         let count = self.tabBar.items!.count
-        
         //image
         let imageW:CGFloat = 21
         let imageX:CGFloat = (ScreenWidth / CGFloat(count) - imageW) * 0.5
@@ -130,16 +126,26 @@ class HEAnimationTabBarController: UITabBarController {
         iconAndLabels.append((icon,textLabel))
     }
     
+    private func addShopCarRedDotView2(viewContainer:UIView){
+        let badgeView = HEShopCarRedDotView.shareShopCarRedDotView
+        
+        let count = self.tabBar.items!.count
+//        let imageW:CGFloat = 21
+//        let imageX:CGFloat = (ScreenWidth / CGFloat(count) - 21) * 0.5
+//        let imageY:CGFloat = 8
+        badgeView.x = (ScreenWidth / CGFloat(count) - 21) * 0.5+21+2
+        badgeView.y = 6
+        viewContainer.addSubview(badgeView)
+    }
+    
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
         selectItemFrom(selectedIndex, toIndex: item.tag)
     }
-    
-    
+
     func selectItemFrom(from:Int, toIndex:Int){
-       
+        if toIndex == 2{ return}
         let fromImageView = iconAndLabels[from].icon
         let toImageView =  iconAndLabels[toIndex].icon
-        
         fromImageView.highlighted = false
         toImageView.highlighted = true
         animationForTabBarItem.playAnimation(toImageView, textLabel: nil)

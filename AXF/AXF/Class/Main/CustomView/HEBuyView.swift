@@ -14,7 +14,7 @@ class HEBuyView: UIView {
     private lazy var addGoodsButton:UIButton = {
         let addGoodsButton = UIButton(type: .Custom)
         addGoodsButton.setImage(UIImage(named: "v2_increase"), forState: .Normal)
-        addGoodsButton.addTarget(self, action: "addGoodsButtonClick", forControlEvents: .TouchUpInside)
+        addGoodsButton.addTarget(self, action: #selector(HEBuyView.addGoodsButtonClick), forControlEvents: .TouchUpInside)
         return addGoodsButton
     }()
     
@@ -22,7 +22,7 @@ class HEBuyView: UIView {
     private lazy var reduceGoodsButton:UIButton = {
         let reduceGoodsButton = UIButton(type: .Custom)
         reduceGoodsButton.setImage(UIImage(named: "v2_reduce"), forState: .Normal)
-        reduceGoodsButton.addTarget(self, action: "reduceGoodsButtonClick", forControlEvents: .TouchUpInside)
+        reduceGoodsButton.addTarget(self, action: #selector(HEBuyView.reduceGoodsButtonClick), forControlEvents: .TouchUpInside)
         return reduceGoodsButton
     }()
     
@@ -73,10 +73,13 @@ class HEBuyView: UIView {
             
             //在cell重新赋值时，不丢失已购信息（其实在内存中，退出应用后，还是会丢失。这里应该使用数据库）
             goods.userBuyNumber = buyNumber
+            postTotalAmountChangedNoti()
         }
     }
-    
-    var addButtonClick:(()->())! //添加按钮单击后执行闭包
+    /// 添加按钮单击后执行闭包
+    var addButtonClick:(()->())! 
+    ///在购物车中，购买数为0时，调用
+    var removeGoods:(()->())!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -101,15 +104,30 @@ class HEBuyView: UIView {
         if buyNumber >= goods.number{ //库存不足
             ProgressHUD.showImage(UIImage(named: "v2_orderSuccess")!, status: "\(goods.name!)库存不足了\n先买这么多, 过段时间再来看看吧~")
         }else{
-            buyNumber++
-            if addButtonClick != nil{
+            buyNumber += 1
+            HEShopCarRedDotView.shareShopCarRedDotView.addProductNum(true)
+            HEShopCarTools.shareShopCarTools.addProduct(goods) //添加到购物车
+            if addButtonClick != nil{ //添加时的动画
                 addButtonClick()
             }
+            
         }
     }
     
     func reduceGoodsButtonClick(){
-        buyNumber--
+        buyNumber -= 1
+        HEShopCarRedDotView.shareShopCarRedDotView.reduceProductNum(true)
+        if buyNumber == 0{
+            HEShopCarTools.shareShopCarTools.reduceProduct(goods) //从购物车中删除
+            if removeGoods != nil{
+                removeGoods()
+            }
+        }
+    }
+    
+    /** 购物车中的总金额数量改变*/
+    private func postTotalAmountChangedNoti(){
+        NSNotificationCenter.defaultCenter().postNotificationName(HENotiShopCarTotalAmountChanged, object: nil)
     }
     
     //显示补货信息

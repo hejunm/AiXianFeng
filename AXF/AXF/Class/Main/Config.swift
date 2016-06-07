@@ -10,6 +10,7 @@ import UIKit
 
 //MARK:   尺寸
 
+public let HEMargin_10:CGFloat = 10
 public let NavigationH: CGFloat = 64
 public let HETabBarH:CGFloat = 49
 public let ScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
@@ -30,16 +31,14 @@ public let HEHomeCollectionTextFont = UIFont.systemFontOfSize(14)
 // MARK: -通知
 public let GuideViewControllerDidFinish = "GuideViewControllerDidFinish"
 public let ADImageLoadFinished =  "ADImageLoadFinished"
+public let HENotiShopCarNoProduce = "HENotiShopCarNoProduce"        //购物车中没有数据时发送
+public let HENotiShopCarTotalAmountChanged = "HENotiShopCarTotalAmountChanged" //购物车中的金额改变
+public let HENotiCheckBoxGroupSelectChanged = "HENotiCheckBoxGroupSelectChanged" //单选改变时触发
 
+// MARK: - Home 属性
 public let HEHomeViewControllerForceImageClick = "HEHomeViewControllerForceImageClick"  //点击了轮播图片
 public let HEHomeViewControllerIconClick = "HEHomeViewControllerIconClick"              //首页icon
 public let HEHomeHeaderViewHeightChanged = "HEHomeHeaderViewHeightChanged"              //首页头部高度改变
-
-
-
-
-// MARK: - Home 属性
-public let HEMargin_10:CGFloat = 10
 public let HEHotViewMargin: CGFloat = HEMargin_10
 public let HEHomeCollectionViewCellMargin: CGFloat = 8
 public let HEHomeCollectionCellAnimationDuration: NSTimeInterval = 1.0

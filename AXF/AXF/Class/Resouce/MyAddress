@@ -5,8 +5,8 @@
 "data": [
 {
 "id": "4351645",
-"accept_name": "维尼的小熊",
-"telphone": "18833331111",
+"accept_name": "hejunm",
+"telphone": "15764222346",
 "province_id": "1",
 "province_name": "北京",
 "city_id": "2",
@@ -21,11 +21,12 @@
 "isnew": "1",
 "version": "2",
 "addr_for_dealer": "西水井胡同1号",
-"gender": "1"
+"gender": "1",
+"isDefault":1
 },
 {
 "id": "4219659",
-"accept_name": "维尼的小熊",
+"accept_name": "hejunm",
 "telphone": "18600009999",
 "province_id": "1",
 "province_name": "北京",
@@ -41,7 +42,8 @@
 "isnew": "1",
 "version": "2",
 "addr_for_dealer": "",
-"gender": "1"
+"gender": "1",
+"isDefault":0
 },
 {
 "id": "4198752",
@@ -61,7 +63,8 @@
 "isnew": "1",
 "version": "2",
 "addr_for_dealer": "西水井胡同1号",
-"gender": "1"
+"gender": "1",
+"isDefault":0
 }
 ]
 }

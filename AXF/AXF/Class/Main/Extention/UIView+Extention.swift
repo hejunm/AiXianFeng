@@ -58,8 +58,16 @@ extension UIView {
     }
     
     var size: CGSize {
-        return self.frame.size
+        get{
+            return self.frame.size
+        }
+        set(newValue){
+            var frame = self.frame
+            frame.size = newValue
+            self.frame = frame
+        }
     }
+    
     var point: CGPoint {
         get{
            return self.frame.origin
