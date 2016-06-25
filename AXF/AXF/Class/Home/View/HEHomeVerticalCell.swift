@@ -10,6 +10,7 @@ import UIKit
 
 class HEHomeVerticalCell: UICollectionViewCell {
 
+    static var Id = "HEHomeVerticalCell"
 //MARK: 属性
     private lazy var goodsImageView: UIImageView = {
         return UIImageView()

@@ -21,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidReceiveMemoryWarning(application: UIApplication) {
-        print("applicationDidReceiveMemoryWarning")
         SDImageCache.sharedImageCache().clearMemory()
+    }
+    
+    //即将退出应用
+    func applicationWillTerminate(application: UIApplication) {
+        HEQueryHistoryModel.shareInstance().savaHistory()
     }
     
     // MARK:- privete Method
@@ -37,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     //设置通知
     private func addNotification(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: GuideViewControllerDidFinish, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"showMainTabBarVC:", name: ADImageLoadFinished, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(AppDelegate.showMainTabBarVC(_:)), name: GuideViewControllerDidFinish, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(AppDelegate.showMainTabBarVC(_:)), name: ADImageLoadFinished, object: nil)
     }
     //设置窗体
     private func setUpWindow(){

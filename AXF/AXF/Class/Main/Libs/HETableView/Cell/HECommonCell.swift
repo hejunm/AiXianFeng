@@ -14,7 +14,10 @@ class HECommonCell: UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(itemModel.id) as? HECommonCell
         if cell == nil{
             //根据不同类型的HECommenItem， 返回对应的cell
-            if itemModel.isMemberOfClass(HECommonItemArrow){
+            
+            if itemModel.isMemberOfClass(HECommenItem){
+                cell = HECommonCell(reuseIdentifier: itemModel.id)
+            }else if itemModel.isMemberOfClass(HECommonItemArrow){
                 cell = HECommonArrowCell(reuseIdentifier: itemModel.id)
             }else if itemModel.isMemberOfClass(HECommonItemOnlyLeftLabel){
                 cell = HECommonOnlyLeftLabelCell(reuseIdentifier: itemModel.id)
@@ -26,8 +29,10 @@ class HECommonCell: UITableViewCell {
                 cell = HECommonOnlyRightLabelCell(reuseIdentifier: itemModel.id)
             }else if itemModel.isMemberOfClass(HECommonItemDetailsCharges){
                 cell = HECommonDetailsChargesCell(reuseIdentifier: itemModel.id)
+            }else if itemModel.isMemberOfClass(HECommonItemCenterLabel){
+                cell = HECommonCenterLabelCell(reuseIdentifier: itemModel.id)
             }else{
-                cell = HECommonCell(reuseIdentifier: itemModel.id)
+                fatalError("subClass of HECommenItem don't match any cell")
             }
         }
         cell?.itemModel = itemModel

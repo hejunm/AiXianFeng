@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HECommonTableViewController: UIViewController {
+class HECommonTableViewController: HEBaseViewController {
     var tableView:UITableView!
     var groups:[HECommenGroup]!{
         didSet{
@@ -24,6 +24,7 @@ class HECommonTableViewController: UIViewController {
 
     private func buildTableView(){
         tableView = UITableView(frame: view.bounds, style: .Grouped)
+        tableView.height -= NavigationH
         tableView.sectionFooterHeight = HEMargin_10
         tableView.separatorStyle = .SingleLine
         tableView.delegate = self
@@ -34,7 +35,7 @@ class HECommonTableViewController: UIViewController {
 
 extension HECommonTableViewController: UITableViewDataSource{
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return groups.count
+        return groups?.count ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,10 +67,6 @@ extension HECommonTableViewController: UITableViewDelegate{
         if  group is HECommonCheckBoxGroup && itemModel is HECommonItemSwitch{            NSNotificationCenter.defaultCenter().postNotificationName(HENotiCheckBoxGroupSelectChanged, object: group, userInfo: ["itemModel":itemModel])
         }
         
-        if let destVcClass =  itemModel.destVcClass{ //跳转的控制器
-            navigationController?.pushViewController(destVcClass, animated: true)
-            return
-        }
         if itemModel.operationBlock != nil{ //闭包
             itemModel.operationBlock!()
             return

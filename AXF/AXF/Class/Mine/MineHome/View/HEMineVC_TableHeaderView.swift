@@ -1,67 +1,24 @@
 //
-//  HEMineTableViewController.swift
+//  HEMineTableHeaderView.swift
 //  AXF
 //
-//  Created by 贺俊孟 on 16/6/6.
+//  Created by 贺俊孟 on 16/6/8.
 //  Copyright © 2016年 贺俊孟. All rights reserved.
 //
 
 import UIKit
 
-class HEMineTableViewController: HECommonTableViewController {
-    
-    private var tableHeaderView:HEMineTableHeaderView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        buildGroup()
-        buildTableHeader()
-    }
-    
-    private func buildTableHeader(){
-        tableHeaderView = HEMineTableHeaderView()
-        tableHeaderView.frame = CGRectMake(0, 0, view.width, 70)
-        tableView?.tableHeaderView = tableHeaderView
-    }
-    
-    private func buildGroup(){
-        
-        let group1 = HECommenGroup()
-        let address = HECommonItemArrow()
-        address.iconName = "v2_my_address_icon"
-        address.title = "我的收货地址"
-        group1.items.append(address)
-        
-        let store = HECommonItemArrow()
-        store.iconName = "icon_mystore"
-        store.title = "我的店铺"
-        group1.items.append(store)
-        
-        //-------------------
-        
-        let group2 = HECommenGroup()
-        let share = HECommonItemArrow()
-        share.iconName = "v2_my_share_icon"
-        share.title = "把乐先锋分享给好友"
-        group2.items.append(share)
-        
-        //------------------------
-        
-        let group3 = HECommenGroup()
-        let help = HECommonItemArrow()
-        help.iconName = "online_service"
-        help.title = "客服帮助"
-        group3.items.append(help)
-        
-        let feedback = HECommonItemArrow()
-        feedback.iconName = "v2_my_feedback_icon"
-        feedback.title = "意见反馈"
-        group3.items.append(feedback)
-        
-        groups = [group1,group2,group3]
-    }
+protocol HEMineVC_TableHeaderViewDelegate {
+    func headerViewBtnClick(type:HEMineVC_TableHeaderViewBtnType)
 }
 
-class HEMineTableHeaderView:UIView{
+enum HEMineVC_TableHeaderViewBtnType {
+    case Order
+    case Coupon
+    case Message
+}
+class HEMineVC_TableHeaderView:UIView{
+    var delegate:HEMineVC_TableHeaderViewDelegate?
     var orderBtn:HEUpImageViewDownTitleLabelButton!  //我的订单
     var couponBtn:HEUpImageViewDownTitleLabelButton! //优惠券
     var messageBtn:HEUpImageViewDownTitleLabelButton!//我的消息
@@ -77,6 +34,7 @@ class HEMineTableHeaderView:UIView{
         orderBtn.setImage(UIImage(named: "v2_my_order_icon"), forState: .Normal)
         orderBtn.titleLabel?.font = UIFont.systemFontOfSize(13)
         orderBtn.setTitleColor(UIColor.colorWithCustom(80, g: 80, b: 80), forState: .Normal)
+        orderBtn.addTarget(self, action: #selector(HEMineVC_TableHeaderView.tableHeaderBtnClick(_:)), forControlEvents: .TouchUpInside)
         addSubview(orderBtn)
         
         couponBtn = HEUpImageViewDownTitleLabelButton()
@@ -84,6 +42,7 @@ class HEMineTableHeaderView:UIView{
         couponBtn.setImage(UIImage(named: "v2_my_coupon_icon"), forState: .Normal)
         couponBtn.titleLabel?.font = UIFont.systemFontOfSize(13)
         couponBtn.setTitleColor(UIColor.colorWithCustom(80, g: 80, b: 80), forState: .Normal)
+        couponBtn.addTarget(self, action: #selector(HEMineVC_TableHeaderView.tableHeaderBtnClick(_:)), forControlEvents: .TouchUpInside)
         addSubview(couponBtn)
         
         messageBtn = HEUpImageViewDownTitleLabelButton()
@@ -91,6 +50,7 @@ class HEMineTableHeaderView:UIView{
         messageBtn.setImage(UIImage(named: "v2_my_message_icon"), forState: .Normal)
         messageBtn.titleLabel?.font = UIFont.systemFontOfSize(13)
         messageBtn.setTitleColor(UIColor.colorWithCustom(80, g: 80, b: 80), forState: .Normal)
+        messageBtn.addTarget(self, action: #selector(HEMineVC_TableHeaderView.tableHeaderBtnClick(_:)), forControlEvents: .TouchUpInside)
         addSubview(messageBtn)
         
         lineView1.backgroundColor = UIColor.grayColor()
@@ -116,6 +76,21 @@ class HEMineTableHeaderView:UIView{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func tableHeaderBtnClick(sender:UIButton){
+        if delegate == nil{ return}
+        switch sender {
+        case orderBtn: //我的订单
+            delegate?.headerViewBtnClick(.Order)
+            break
+        case couponBtn: //优惠券
+            delegate?.headerViewBtnClick(.Coupon)
+            break
+        case messageBtn: //我的消息
+            delegate?.headerViewBtnClick(.Message)
+            break
+        default:
+            break
+        }
+    }
 }
-
-

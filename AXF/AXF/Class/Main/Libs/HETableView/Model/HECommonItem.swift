@@ -38,8 +38,6 @@ class HECommenItem:NSObject{
     
     /// cell height
     var height:CGFloat = 44
-    /// 点击cell要跳转到的控制器
-    var destVcClass:UIViewController?
     
     /// 点击cell要执行的闭包
     var operationBlock:(()->())?
@@ -58,6 +56,19 @@ class HECommonItemOnlyLeftLabel:HECommenItem{
         super.init()
         height = 30
     }
+}
+/// 只显示右边的, subTitle属性
+class HECommonItemOnlyRightLabel:HECommenItem{
+    override var id:String{return "HECommonItemOnlyRightLabel"}
+    
+    override init() {
+        super.init()
+        height = 30
+    }
+}
+
+class HECommonItemCenterLabel:HECommenItem{
+    override var id:String{return "HECommonItemCenterLabel"}
 }
 
 /// 可以修换状态
@@ -79,15 +90,7 @@ class HECommonItemThreeLabel:HECommenItem{
     var thirdTitle:String?
 }
 
-/// 只显示右边的, subTitle属性
-class HECommonItemOnlyRightLabel:HECommenItem{
-     override var id:String{return "HECommonItemOnlyRightLabel"}
-    
-    override init() {
-        super.init()
-        height = 30
-    }
-}
+
 
 /// 费用明细
 class HECommonItemDetailsCharges:HECommenItem{

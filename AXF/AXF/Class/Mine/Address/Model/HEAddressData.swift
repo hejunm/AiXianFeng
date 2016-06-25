@@ -29,7 +29,6 @@ class HEAddressData: NSObject,DictModelProtocol{
             }
         }
     }
-    
     /** 获取全部收货地址*/
     func getAllAddress()->[HEAddress]?{
         return data
@@ -56,6 +55,15 @@ class HEAddressData: NSObject,DictModelProtocol{
             }
         }
     }
+    func addAddress(address:HEAddress){
+        data?.append(address)
+    }
+    func removeAddress(address:HEAddress){
+        if let index = data?.indexOf(address){
+           data?.removeAtIndex(index)
+        }
+       
+    }
 }
 
 class HEAddress: NSObject {
@@ -68,4 +76,7 @@ class HEAddress: NSObject {
     var lat: String?
     var gender: String?
     var isDefault:Int = 0
+    var isMan:Bool{
+        return self.gender == "1"
+    }
 }

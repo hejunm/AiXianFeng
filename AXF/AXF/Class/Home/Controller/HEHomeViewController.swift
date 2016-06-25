@@ -21,7 +21,6 @@ class HEHomeViewController: HESelectedAdressViewController{
 // MARK: --初始化
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         buildNotificaton()
         buildCollectionView()
         buildRefreshView()
@@ -103,8 +102,7 @@ class HEHomeViewController: HESelectedAdressViewController{
     }
     
 
-//MARK: action
-    
+    //MARK: action
     func fouceImageClick(noti:NSNotification){
         if let activity = noti.userInfo?["focus"] as? Activitie{
             let webViewVC = HEWebViewController(title: activity.name, url: activity.customURL)

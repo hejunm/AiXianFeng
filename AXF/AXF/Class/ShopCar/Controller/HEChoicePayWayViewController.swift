@@ -14,16 +14,10 @@ class HEChoicePayWayViewController: HECommonTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "结算付款"
-        tableView.frame = CGRectMake(0, 0, view.width, view.height-NavigationH)
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.scrollIndicatorInsets = tableView.contentInset
-        //tableView.height = tableView.height  - NavigationH
         buildGroup()
         buildFootView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     private func buildGroup(){

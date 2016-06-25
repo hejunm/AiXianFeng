@@ -37,10 +37,10 @@ class HETitleViewForNavigationItem: UIView {
     
     }
     
-    func setTitle(title:String){
+    func setTitle(title:String?){
         titleLabel.text = title
-        titleLabel.sizeToFit()
-        setNeedsLayout()
+        //titleLabel.sizeToFit()
+//        setNeedsLayout()
     }
 
     override func layoutSubviews() {

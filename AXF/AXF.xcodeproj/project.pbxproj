@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2300D1D61D0F961300202C59 /* HECouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300D1D51D0F961300202C59 /* HECouponCell.swift */; };
+		2300D1D81D0FC43C00202C59 /* HECouponData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300D1D71D0FC43C00202C59 /* HECouponData.swift */; };
+		2300D1DA1D0FCC0A00202C59 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300D1D91D0FCC0A00202C59 /* String+Extention.swift */; };
 		230EA8AD1CD704DB005DD2FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EA8751CD704DA005DD2FF /* Config.swift */; };
 		230EA8AE1CD704DB005DD2FF /* HEAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EA8771CD704DA005DD2FF /* HEAnimationController.swift */; };
 		230EA8AF1CD704DB005DD2FF /* HEAnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230EA8781CD704DA005DD2FF /* HEAnimationTabBarController.swift */; };
@@ -63,30 +66,53 @@
 		2311ADE41CDA12F10008CC74 /* HeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2311ADE31CDA12F10008CC74 /* HeadResources.swift */; };
 		2311ADE61CDA157B0008CC74 /* HEPageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2311ADE51CDA157B0008CC74 /* HEPageScrollView.swift */; };
 		23126EC21CFFC29100AC7726 /* HEChoicePayWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23126EC11CFFC29100AC7726 /* HEChoicePayWayViewController.swift */; };
+		23159B8B1D1CCC5A007B4E47 /* HESearchKeyWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B8A1D1CCC5A007B4E47 /* HESearchKeyWordView.swift */; };
+		23159B8D1D1D0A98007B4E47 /* HEQueryHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B8C1D1D0A98007B4E47 /* HEQueryHistoryModel.swift */; };
+		23159B8F1D1D2915007B4E47 /* HEHotQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B8E1D1D2915007B4E47 /* HEHotQueryModel.swift */; };
+		23159B911D1D79FD007B4E47 /* HESearchProcducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B901D1D79FD007B4E47 /* HESearchProcducts.swift */; };
+		232297B61D138C61003557A0 /* HEEditAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232297B51D138C61003557A0 /* HEEditAddressVC.swift */; };
+		232297B81D13A7BE003557A0 /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */; };
 		232C6B981CCE507700E7A55D /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6B971CCE507600E7A55D /* ADModel.swift */; };
+		232D62001D09055700AEFA95 /* HEMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61E91D09055700AEFA95 /* HEMineVC.swift */; };
+		232D62011D09055700AEFA95 /* HEMineVC_TabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61EA1D09055700AEFA95 /* HEMineVC_TabelVC.swift */; };
+		232D62031D09055700AEFA95 /* HEUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61ED1D09055700AEFA95 /* HEUserInfo.swift */; };
+		232D62041D09055700AEFA95 /* HEMineVC_HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61EF1D09055700AEFA95 /* HEMineVC_HeaderView.swift */; };
+		232D62051D09055700AEFA95 /* HEMineVC_TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61F01D09055700AEFA95 /* HEMineVC_TableHeaderView.swift */; };
+		232D62061D09055700AEFA95 /* HEMineOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61F31D09055700AEFA95 /* HEMineOrderVC.swift */; };
+		232D62071D09055700AEFA95 /* HEMineAboutMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61F71D09055700AEFA95 /* HEMineAboutMeVC.swift */; };
+		232D62081D09055700AEFA95 /* HEMineSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D61F81D09055700AEFA95 /* HEMineSettingVC.swift */; };
+		232D620B1D0905BF00AEFA95 /* HEUpImageViewDownTitleLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D620A1D0905BF00AEFA95 /* HEUpImageViewDownTitleLabelButton.swift */; };
 		23330C551CFC34FD0086A715 /* HEShopCarRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23330C541CFC34FD0086A715 /* HEShopCarRedDotView.swift */; };
 		23330C571CFC35FC0086A715 /* HEShopCarTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23330C561CFC35FC0086A715 /* HEShopCarTools.swift */; };
 		23330C591CFC79EB0086A715 /* HEShopCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23330C581CFC79EB0086A715 /* HEShopCarViewController.swift */; };
-		23333CB01D050F4000FA7D39 /* HEMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23333CAF1D050F4000FA7D39 /* HEMineVC.swift */; };
-		23333CB21D05104300FA7D39 /* HEMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23333CB11D05104300FA7D39 /* HEMineHeaderView.swift */; };
 		2347A94C1CDF5515000FF1DC /* HEHomeHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347A94B1CDF5515000FF1DC /* HEHomeHorizontalCell.swift */; };
 		2347A94E1CDF5531000FF1DC /* HEHomeVerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347A94D1CDF5531000FF1DC /* HEHomeVerticalCell.swift */; };
 		2347A9501CDF6316000FF1DC /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347A94F1CDF6316000FF1DC /* FreshHot.swift */; };
 		235A10571CFEE828008DF56F /* HEShopCarTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A10561CFEE828008DF56F /* HEShopCarTableView.swift */; };
 		235A10591CFEE88F008DF56F /* HEEmptyGoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A10581CFEE88F008DF56F /* HEEmptyGoodsView.swift */; };
 		235A105B1CFEEAAD008DF56F /* HEShopCarFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A105A1CFEEAAD008DF56F /* HEShopCarFootView.swift */; };
-		23685DE21D051FBD000D968C /* HEMineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685DE11D051FBD000D968C /* HEMineTableViewController.swift */; };
 		236B4B6C1CFBCE3F00D07D18 /* HEBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B4B6B1CFBCE3F00D07D18 /* HEBadgeView.swift */; };
+		236E82C01D07B42C001D995B /* HEFileTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E82BF1D07B42C001D995B /* HEFileTools.swift */; };
 		2371E8FC1CF6A38400277B62 /* HETableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E8FB1CF6A38400277B62 /* HETableView.swift */; };
 		2371E9091CF6DC4B00277B62 /* HEProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E9051CF6DC4B00277B62 /* HEProductViewController.swift */; };
 		2371E90A1CF6DC4B00277B62 /* HESuperMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E9061CF6DC4B00277B62 /* HESuperMarketViewController.swift */; };
 		2371E90C1CF6DC9300277B62 /* HESuperMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E90B1CF6DC9300277B62 /* HESuperMarket.swift */; };
 		2371E90E1CF6E97D00277B62 /* HECategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E90D1CF6E97D00277B62 /* HECategoryCell.swift */; };
 		2371E9101CF713E800277B62 /* HEProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371E90F1CF713E800277B62 /* HEProductCell.swift */; };
+		237B8DCF1D0803B0007E5C23 /* HECommonCenterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B8DCE1D0803B0007E5C23 /* HECommonCenterLabelCell.swift */; };
+		238045261D10E51A00FCA1CB /* HEMineStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238045231D10E51A00FCA1CB /* HEMineStoreVC.swift */; };
+		2380452B1D10E6BD00FCA1CB /* HEMineFeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238045281D10E6BD00FCA1CB /* HEMineFeedbackVC.swift */; };
+		2380452D1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380452C1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift */; };
+		238045321D10F70800FCA1CB /* HEMineHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380452F1D10F70800FCA1CB /* HEMineHelpVC.swift */; };
+		238045341D10FDF000FCA1CB /* HEMineHelpDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238045331D10FDF000FCA1CB /* HEMineHelpDetailVC.swift */; };
+		238045361D1103AD00FCA1CB /* HeHelpQuestionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238045351D1103AD00FCA1CB /* HeHelpQuestionHeaderView.swift */; };
+		238045381D11062F00FCA1CB /* HEQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238045371D11062F00FCA1CB /* HEQuestionData.swift */; };
 		238300661CCDBFD200864F7F /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300651CCDBFD200864F7F /* GuideViewController.swift */; };
 		238300681CCDC9B800864F7F /* GuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238300671CCDC9B800864F7F /* GuideCell.swift */; };
 		2383006C1CCDF52E00864F7F /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383006B1CCDF52E00864F7F /* ADViewController.swift */; };
-		2389E4C91D05A14A00758F74 /* HEUpImageViewDownTitleLabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389E4C81D05A14A00758F74 /* HEUpImageViewDownTitleLabelButton.swift */; };
+		238CD80A1D0FF82C0082194C /* HEMineMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CD8071D0FF82C0082194C /* HEMineMessageVC.swift */; };
+		238CD80C1D10075C0082194C /* HESystemMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CD80B1D10075C0082194C /* HESystemMsgCell.swift */; };
+		238CD80E1D1015E80082194C /* HEMessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CD80D1D1015E80082194C /* HEMessageData.swift */; };
 		2390FC901CD33C4A00FCE09F /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC7F1CD33C4A00FCE09F /* AD */; };
 		2390FC911CD33C4A00FCE09F /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC801CD33C4A00FCE09F /* FocusURL.plist */; };
 		2390FC921CD33C4A00FCE09F /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC811CD33C4A00FCE09F /* HelpPlist.plist */; };
@@ -94,7 +120,6 @@
 		2390FC941CD33C4A00FCE09F /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC831CD33C4A00FCE09F /* MinePlist.plist */; };
 		2390FC951CD33C4A00FCE09F /* MyAddress in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC841CD33C4A00FCE09F /* MyAddress */; };
 		2390FC961CD33C4A00FCE09F /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC851CD33C4A00FCE09F /* MyCoupon */; };
-		2390FC971CD33C4A00FCE09F /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC861CD33C4A00FCE09F /* MyOrders */; };
 		2390FC981CD33C4A00FCE09F /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC871CD33C4A00FCE09F /* Search */; };
 		2390FC991CD33C4A00FCE09F /* SearchProduct in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC881CD33C4A00FCE09F /* SearchProduct */; };
 		2390FC9A1CD33C4A00FCE09F /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC891CD33C4A00FCE09F /* supermarket */; };
@@ -106,13 +131,20 @@
 		2390FCA01CD33C4A00FCE09F /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 2390FC8F1CD33C4A00FCE09F /* 首页焦点按钮 */; };
 		239660F31CCCED2700113951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239660F21CCCED2700113951 /* AppDelegate.swift */; };
 		239660FA1CCCED2700113951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239660F91CCCED2700113951 /* Assets.xcassets */; };
+		239BB6391D0EEA14009A4DCB /* HEMineCouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239BB6361D0EEA14009A4DCB /* HEMineCouponVC.swift */; };
+		239BB63B1D0EEB05009A4DCB /* HEBindingCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239BB63A1D0EEB05009A4DCB /* HEBindingCouponView.swift */; };
+		239CA5461D0C04A3002A587E /* HEMineOrderStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CA5451D0C04A3002A587E /* HEMineOrderStatusVC.swift */; };
+		239CA5481D0C072B002A587E /* HESegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CA5471D0C072B002A587E /* HESegmentedControl.swift */; };
+		239CA54A1D0C2201002A587E /* HEMineOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CA5491D0C2201002A587E /* HEMineOrderDetailVC.swift */; };
+		239CA54C1D0C41A3002A587E /* HEMineOrderStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CA54B1D0C41A3002A587E /* HEMineOrderStatusCell.swift */; };
 		23A381421CDB7D7E001DA265 /* HEIconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A381411CDB7D7E001DA265 /* HEIconTitleView.swift */; };
+		23ABEE221D12275D0041AB2D /* HEHelpAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ABEE211D12275D0041AB2D /* HEHelpAnswerCell.swift */; };
 		23AC168A1CFE67E5004731DD /* HEHeaderReceiptAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC16891CFE67E5004731DD /* HEHeaderReceiptAddressView.swift */; };
 		23AC168C1CFE6826004731DD /* HEHeaderSuperMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC168B1CFE6826004731DD /* HEHeaderSuperMarketView.swift */; };
 		23AC168E1CFE6894004731DD /* HEHeaderCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC168D1CFE6894004731DD /* HEHeaderCommentView.swift */; };
 		23AC16901CFE68D6004731DD /* HEHeaderReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC168F1CFE68D6004731DD /* HEHeaderReserveView.swift */; };
-		23AC16961CFE7B3B004731DD /* HEUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC16951CFE7B3B004731DD /* HEUserInfo.swift */; };
-		23AC16981CFE7D97004731DD /* HEAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC16971CFE7D97004731DD /* HEAddressData.swift */; };
+		23B263FE1D1E32FE001393B5 /* HENoSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */; };
+		23B264001D1E3369001393B5 /* HEYellowShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */; };
 		23B2C6311D03CC8500626ACC /* HECommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C6291D03CC8500626ACC /* HECommonCell.swift */; };
 		23B2C6321D03CC8500626ACC /* HECommonArrowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C62A1D03CC8500626ACC /* HECommonArrowCell.swift */; };
 		23B2C6331D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C62B1D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift */; };
@@ -120,9 +152,18 @@
 		23B2C6351D03CC8500626ACC /* HECommonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C62E1D03CC8500626ACC /* HECommonItem.swift */; };
 		23B2C6361D03CC8500626ACC /* HECommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C6301D03CC8500626ACC /* HECommonTableViewController.swift */; };
 		23B2C6381D03CEEC00626ACC /* HECommonThreeLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C6371D03CEEC00626ACC /* HECommonThreeLabelCell.swift */; };
+		23B751731D0D5E4500402C4A /* HEOrderEvaluateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B751721D0D5E4500402C4A /* HEOrderEvaluateView.swift */; };
 		23B8A95F1CF459B700E07007 /* HEWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8A95E1CF459B700E07007 /* HEWebViewController.swift */; };
 		23B8BD4E1CDAD4DF00FCDBB3 /* HEHotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BD4D1CDAD4DF00FCDBB3 /* HEHotView.swift */; };
+		23BA02DE1D15965100E331B6 /* HESearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA02DD1D15965100E331B6 /* HESearchVC.swift */; };
+		23BB90851D0B9B710064CC5B /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB90841D0B9B700064CC5B /* OrderData.swift */; };
+		23BB90871D0BABCF0064CC5B /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = 23BB90861D0BABCF0064CC5B /* MyOrders */; };
+		23BB90891D0BAE1F0064CC5B /* HEMineOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB90881D0BAE1F0064CC5B /* HEMineOrderCell.swift */; };
 		23BCB3F01CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCB3EF1CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift */; };
+		23CD6D5A1D0CF5E100398B32 /* HEOrderDetialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD6D591D0CF5E100398B32 /* HEOrderDetialView.swift */; };
+		23CD6D5C1D0CFDE800398B32 /* HEOrderDetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD6D5B1D0CFDE800398B32 /* HEOrderDetailUserView.swift */; };
+		23CD6D5E1D0D020200398B32 /* UIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD6D5D1D0D020200398B32 /* UIImage+Extention.swift */; };
+		23CD6D601D0D048A00398B32 /* HEOrderGoodsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD6D5F1D0D048A00398B32 /* HEOrderGoodsListView.swift */; };
 		23D042581D040A4E004A37D5 /* HECommonOnlyRightLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D042571D040A4E004A37D5 /* HECommonOnlyRightLabelCell.swift */; };
 		23D0425A1D040FE1004A37D5 /* HECommonDetailsChargesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D042591D040FE1004A37D5 /* HECommonDetailsChargesCell.swift */; };
 		23D396D81CD8EB8800AE005C /* HERefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D396D71CD8EB8800AE005C /* HERefreshHeader.swift */; };
@@ -132,10 +173,19 @@
 		23D5DD9E1CE5DC1300048B51 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D5DD9B1CE5DC1300048B51 /* SVProgressHUD.m */; };
 		23D5DDA01CE5DE4600048B51 /* ProgressHUB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5DD9F1CE5DE4600048B51 /* ProgressHUB.swift */; };
 		23D5DDA21CE60A9200048B51 /* HEHomeCollectionFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5DDA11CE60A9200048B51 /* HEHomeCollectionFootView.swift */; };
+		23DCCDFE1D162BB400E59A4C /* HESearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DCCDFD1D162BB400E59A4C /* HESearchView.swift */; };
+		23DCCE001D162BE400E59A4C /* HESearchResultCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DCCDFF1D162BE400E59A4C /* HESearchResultCollectionView.swift */; };
+		23E5F0671D12D3B1006F1CBF /* HEMineAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F0641D12D3B1006F1CBF /* HEMineAddressVC.swift */; };
+		23E5F0691D12D44E006F1CBF /* HEAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F0681D12D44E006F1CBF /* HEAddressData.swift */; };
+		23E5F06B1D12DC85006F1CBF /* HEAddressFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F06A1D12DC85006F1CBF /* HEAddressFootView.swift */; };
+		23E5F06D1D12EAAB006F1CBF /* HEAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F06C1D12EAAB006F1CBF /* HEAddressCell.swift */; };
 		23FE7C161CFDCF6300645C9E /* HEShopCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE7C151CFDCF6300645C9E /* HEShopCarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2300D1D51D0F961300202C59 /* HECouponCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECouponCell.swift; sourceTree = "<group>"; };
+		2300D1D71D0FC43C00202C59 /* HECouponData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECouponData.swift; sourceTree = "<group>"; };
+		2300D1D91D0FCC0A00202C59 /* String+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		230EA8751CD704DA005DD2FF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		230EA8771CD704DA005DD2FF /* HEAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAnimationController.swift; sourceTree = "<group>"; };
 		230EA8781CD704DA005DD2FF /* HEAnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAnimationTabBarController.swift; sourceTree = "<group>"; };
@@ -228,20 +278,33 @@
 		2311ADE31CDA12F10008CC74 /* HeadResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadResources.swift; sourceTree = "<group>"; };
 		2311ADE51CDA157B0008CC74 /* HEPageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEPageScrollView.swift; sourceTree = "<group>"; };
 		23126EC11CFFC29100AC7726 /* HEChoicePayWayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEChoicePayWayViewController.swift; sourceTree = "<group>"; };
+		23159B8A1D1CCC5A007B4E47 /* HESearchKeyWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchKeyWordView.swift; sourceTree = "<group>"; };
+		23159B8C1D1D0A98007B4E47 /* HEQueryHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEQueryHistoryModel.swift; sourceTree = "<group>"; };
+		23159B8E1D1D2915007B4E47 /* HEHotQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHotQueryModel.swift; sourceTree = "<group>"; };
+		23159B901D1D79FD007B4E47 /* HESearchProcducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchProcducts.swift; sourceTree = "<group>"; };
+		232297B51D138C61003557A0 /* HEEditAddressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEEditAddressVC.swift; sourceTree = "<group>"; };
+		232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageRightTextButton.swift; sourceTree = "<group>"; };
 		232C6B971CCE507600E7A55D /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
+		232D61E91D09055700AEFA95 /* HEMineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineVC.swift; sourceTree = "<group>"; };
+		232D61EA1D09055700AEFA95 /* HEMineVC_TabelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineVC_TabelVC.swift; sourceTree = "<group>"; };
+		232D61ED1D09055700AEFA95 /* HEUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEUserInfo.swift; sourceTree = "<group>"; };
+		232D61EF1D09055700AEFA95 /* HEMineVC_HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineVC_HeaderView.swift; sourceTree = "<group>"; };
+		232D61F01D09055700AEFA95 /* HEMineVC_TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineVC_TableHeaderView.swift; sourceTree = "<group>"; };
+		232D61F31D09055700AEFA95 /* HEMineOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineOrderVC.swift; sourceTree = "<group>"; };
+		232D61F71D09055700AEFA95 /* HEMineAboutMeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineAboutMeVC.swift; sourceTree = "<group>"; };
+		232D61F81D09055700AEFA95 /* HEMineSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineSettingVC.swift; sourceTree = "<group>"; };
+		232D620A1D0905BF00AEFA95 /* HEUpImageViewDownTitleLabelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEUpImageViewDownTitleLabelButton.swift; sourceTree = "<group>"; };
 		23330C541CFC34FD0086A715 /* HEShopCarRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarRedDotView.swift; sourceTree = "<group>"; };
 		23330C561CFC35FC0086A715 /* HEShopCarTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarTools.swift; sourceTree = "<group>"; };
 		23330C581CFC79EB0086A715 /* HEShopCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarViewController.swift; sourceTree = "<group>"; };
-		23333CAF1D050F4000FA7D39 /* HEMineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineVC.swift; sourceTree = "<group>"; };
-		23333CB11D05104300FA7D39 /* HEMineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineHeaderView.swift; sourceTree = "<group>"; };
 		2347A94B1CDF5515000FF1DC /* HEHomeHorizontalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHomeHorizontalCell.swift; sourceTree = "<group>"; };
 		2347A94D1CDF5531000FF1DC /* HEHomeVerticalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHomeVerticalCell.swift; sourceTree = "<group>"; };
 		2347A94F1CDF6316000FF1DC /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreshHot.swift; sourceTree = "<group>"; };
 		235A10561CFEE828008DF56F /* HEShopCarTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarTableView.swift; sourceTree = "<group>"; };
 		235A10581CFEE88F008DF56F /* HEEmptyGoodsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEEmptyGoodsView.swift; sourceTree = "<group>"; };
 		235A105A1CFEEAAD008DF56F /* HEShopCarFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarFootView.swift; sourceTree = "<group>"; };
-		23685DE11D051FBD000D968C /* HEMineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineTableViewController.swift; sourceTree = "<group>"; };
 		236B4B6B1CFBCE3F00D07D18 /* HEBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEBadgeView.swift; sourceTree = "<group>"; };
+		236E82BF1D07B42C001D995B /* HEFileTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEFileTools.swift; sourceTree = "<group>"; };
 		2371E8FB1CF6A38400277B62 /* HETableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HETableView.swift; sourceTree = "<group>"; };
 		2371E9051CF6DC4B00277B62 /* HEProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEProductViewController.swift; sourceTree = "<group>"; };
 		2371E9061CF6DC4B00277B62 /* HESuperMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESuperMarketViewController.swift; sourceTree = "<group>"; };
@@ -249,11 +312,21 @@
 		2371E90D1CF6E97D00277B62 /* HECategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECategoryCell.swift; sourceTree = "<group>"; };
 		2371E90F1CF713E800277B62 /* HEProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEProductCell.swift; sourceTree = "<group>"; };
 		2371E9111CF7205F00277B62 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		237B8DCE1D0803B0007E5C23 /* HECommonCenterLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonCenterLabelCell.swift; sourceTree = "<group>"; };
+		238045231D10E51A00FCA1CB /* HEMineStoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineStoreVC.swift; sourceTree = "<group>"; };
+		238045281D10E6BD00FCA1CB /* HEMineFeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineFeedbackVC.swift; sourceTree = "<group>"; };
+		2380452C1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEPlaceHolderTextView.swift; sourceTree = "<group>"; };
+		2380452F1D10F70800FCA1CB /* HEMineHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineHelpVC.swift; sourceTree = "<group>"; };
+		238045331D10FDF000FCA1CB /* HEMineHelpDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineHelpDetailVC.swift; sourceTree = "<group>"; };
+		238045351D1103AD00FCA1CB /* HeHelpQuestionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeHelpQuestionHeaderView.swift; sourceTree = "<group>"; };
+		238045371D11062F00FCA1CB /* HEQuestionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEQuestionData.swift; sourceTree = "<group>"; };
 		238300651CCDBFD200864F7F /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		238300671CCDC9B800864F7F /* GuideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideCell.swift; sourceTree = "<group>"; };
 		2383006B1CCDF52E00864F7F /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		238300A71CCDFC5000864F7F /* AXF+bridging+Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AXF+bridging+Header.h"; sourceTree = "<group>"; };
-		2389E4C81D05A14A00758F74 /* HEUpImageViewDownTitleLabelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HEUpImageViewDownTitleLabelButton.swift; path = AXF/Class/Mine/Controller/HEUpImageViewDownTitleLabelButton.swift; sourceTree = SOURCE_ROOT; };
+		238CD8071D0FF82C0082194C /* HEMineMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineMessageVC.swift; sourceTree = "<group>"; };
+		238CD80B1D10075C0082194C /* HESystemMsgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESystemMsgCell.swift; sourceTree = "<group>"; };
+		238CD80D1D1015E80082194C /* HEMessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMessageData.swift; sourceTree = "<group>"; };
 		2390FC7F1CD33C4A00FCE09F /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
 		2390FC801CD33C4A00FCE09F /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
 		2390FC811CD33C4A00FCE09F /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpPlist.plist; sourceTree = "<group>"; };
@@ -261,7 +334,6 @@
 		2390FC831CD33C4A00FCE09F /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
 		2390FC841CD33C4A00FCE09F /* MyAddress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAddress; sourceTree = "<group>"; };
 		2390FC851CD33C4A00FCE09F /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyCoupon; sourceTree = "<group>"; };
-		2390FC861CD33C4A00FCE09F /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyOrders; sourceTree = "<group>"; };
 		2390FC871CD33C4A00FCE09F /* Search */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Search; sourceTree = "<group>"; };
 		2390FC881CD33C4A00FCE09F /* SearchProduct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchProduct; sourceTree = "<group>"; };
 		2390FC891CD33C4A00FCE09F /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
@@ -275,13 +347,20 @@
 		239660F21CCCED2700113951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239660F91CCCED2700113951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		239660FE1CCCED2700113951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239BB6361D0EEA14009A4DCB /* HEMineCouponVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineCouponVC.swift; sourceTree = "<group>"; };
+		239BB63A1D0EEB05009A4DCB /* HEBindingCouponView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEBindingCouponView.swift; sourceTree = "<group>"; };
+		239CA5451D0C04A3002A587E /* HEMineOrderStatusVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineOrderStatusVC.swift; sourceTree = "<group>"; };
+		239CA5471D0C072B002A587E /* HESegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESegmentedControl.swift; sourceTree = "<group>"; };
+		239CA5491D0C2201002A587E /* HEMineOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineOrderDetailVC.swift; sourceTree = "<group>"; };
+		239CA54B1D0C41A3002A587E /* HEMineOrderStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineOrderStatusCell.swift; sourceTree = "<group>"; };
 		23A381411CDB7D7E001DA265 /* HEIconTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEIconTitleView.swift; sourceTree = "<group>"; };
+		23ABEE211D12275D0041AB2D /* HEHelpAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHelpAnswerCell.swift; sourceTree = "<group>"; };
 		23AC16891CFE67E5004731DD /* HEHeaderReceiptAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderReceiptAddressView.swift; sourceTree = "<group>"; };
 		23AC168B1CFE6826004731DD /* HEHeaderSuperMarketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderSuperMarketView.swift; sourceTree = "<group>"; };
 		23AC168D1CFE6894004731DD /* HEHeaderCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderCommentView.swift; sourceTree = "<group>"; };
 		23AC168F1CFE68D6004731DD /* HEHeaderReserveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderReserveView.swift; sourceTree = "<group>"; };
-		23AC16951CFE7B3B004731DD /* HEUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEUserInfo.swift; sourceTree = "<group>"; };
-		23AC16971CFE7D97004731DD /* HEAddressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressData.swift; sourceTree = "<group>"; };
+		23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HENoSearchResultView.swift; sourceTree = "<group>"; };
+		23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEYellowShopCarView.swift; sourceTree = "<group>"; };
 		23B2C6291D03CC8500626ACC /* HECommonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonCell.swift; sourceTree = "<group>"; };
 		23B2C62A1D03CC8500626ACC /* HECommonArrowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonArrowCell.swift; sourceTree = "<group>"; };
 		23B2C62B1D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonOnlyLeftLabelCell.swift; sourceTree = "<group>"; };
@@ -289,9 +368,18 @@
 		23B2C62E1D03CC8500626ACC /* HECommonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonItem.swift; sourceTree = "<group>"; };
 		23B2C6301D03CC8500626ACC /* HECommonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonTableViewController.swift; sourceTree = "<group>"; };
 		23B2C6371D03CEEC00626ACC /* HECommonThreeLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonThreeLabelCell.swift; sourceTree = "<group>"; };
+		23B751721D0D5E4500402C4A /* HEOrderEvaluateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEOrderEvaluateView.swift; sourceTree = "<group>"; };
 		23B8A95E1CF459B700E07007 /* HEWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEWebViewController.swift; sourceTree = "<group>"; };
 		23B8BD4D1CDAD4DF00FCDBB3 /* HEHotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHotView.swift; sourceTree = "<group>"; };
+		23BA02DD1D15965100E331B6 /* HESearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchVC.swift; sourceTree = "<group>"; };
+		23BB90841D0B9B700064CC5B /* OrderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
+		23BB90861D0BABCF0064CC5B /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyOrders; sourceTree = "<group>"; };
+		23BB90881D0BAE1F0064CC5B /* HEMineOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineOrderCell.swift; sourceTree = "<group>"; };
 		23BCB3EF1CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESuperMarketHeaderView.swift; sourceTree = "<group>"; };
+		23CD6D591D0CF5E100398B32 /* HEOrderDetialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEOrderDetialView.swift; sourceTree = "<group>"; };
+		23CD6D5B1D0CFDE800398B32 /* HEOrderDetailUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HEOrderDetailUserView.swift; path = AXF/Class/Mine/Order/View/HEOrderDetailUserView.swift; sourceTree = SOURCE_ROOT; };
+		23CD6D5D1D0D020200398B32 /* UIImage+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extention.swift"; sourceTree = "<group>"; };
+		23CD6D5F1D0D048A00398B32 /* HEOrderGoodsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEOrderGoodsListView.swift; sourceTree = "<group>"; };
 		23D042571D040A4E004A37D5 /* HECommonOnlyRightLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonOnlyRightLabelCell.swift; sourceTree = "<group>"; };
 		23D042591D040FE1004A37D5 /* HECommonDetailsChargesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonDetailsChargesCell.swift; sourceTree = "<group>"; };
 		23D396D71CD8EB8800AE005C /* HERefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HERefreshHeader.swift; sourceTree = "<group>"; };
@@ -303,6 +391,12 @@
 		23D5DD9B1CE5DC1300048B51 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		23D5DD9F1CE5DE4600048B51 /* ProgressHUB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUB.swift; sourceTree = "<group>"; };
 		23D5DDA11CE60A9200048B51 /* HEHomeCollectionFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHomeCollectionFootView.swift; sourceTree = "<group>"; };
+		23DCCDFD1D162BB400E59A4C /* HESearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchView.swift; sourceTree = "<group>"; };
+		23DCCDFF1D162BE400E59A4C /* HESearchResultCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchResultCollectionView.swift; sourceTree = "<group>"; };
+		23E5F0641D12D3B1006F1CBF /* HEMineAddressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEMineAddressVC.swift; sourceTree = "<group>"; };
+		23E5F0681D12D44E006F1CBF /* HEAddressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressData.swift; sourceTree = "<group>"; };
+		23E5F06A1D12DC85006F1CBF /* HEAddressFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressFootView.swift; sourceTree = "<group>"; };
+		23E5F06C1D12EAAB006F1CBF /* HEAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressCell.swift; sourceTree = "<group>"; };
 		23FE7C151CFDCF6300645C9E /* HEShopCarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -347,12 +441,15 @@
 		230EA87D1CD704DA005DD2FF /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				2389E4C81D05A14A00758F74 /* HEUpImageViewDownTitleLabelButton.swift */,
 				23D5DD941CE5C39300048B51 /* HEBuyView.swift */,
 				230EA87F1CD704DA005DD2FF /* HETitleViewForNavigationItem.swift */,
 				23D396D71CD8EB8800AE005C /* HERefreshHeader.swift */,
 				2371E8FB1CF6A38400277B62 /* HETableView.swift */,
 				236B4B6B1CFBCE3F00D07D18 /* HEBadgeView.swift */,
+				232D620A1D0905BF00AEFA95 /* HEUpImageViewDownTitleLabelButton.swift */,
+				239CA5471D0C072B002A587E /* HESegmentedControl.swift */,
+				2380452C1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift */,
+				232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -364,6 +461,8 @@
 				230EA8821CD704DA005DD2FF /* UIColor+Extention.swift */,
 				230EA8831CD704DA005DD2FF /* UIDevice+Extention.swift */,
 				230EA8841CD704DA005DD2FF /* UIView+Extention.swift */,
+				23CD6D5D1D0D020200398B32 /* UIImage+Extention.swift */,
+				2300D1D91D0FCC0A00202C59 /* String+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -434,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				23D5DD9F1CE5DE4600048B51 /* ProgressHUB.swift */,
+				236E82BF1D07B42C001D995B /* HEFileTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -564,6 +664,168 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		232D61DC1D09055700AEFA95 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				232D61E71D09055700AEFA95 /* MineHome */,
+				232D61DD1D09055700AEFA95 /* Address */,
+				232D61DF1D09055700AEFA95 /* Coupon */,
+				232D61E11D09055700AEFA95 /* Feedback */,
+				232D61E31D09055700AEFA95 /* Help */,
+				232D61E51D09055700AEFA95 /* Message */,
+				232D61F11D09055700AEFA95 /* Order */,
+				232D61F61D09055700AEFA95 /* Seeting */,
+				232D61F91D09055700AEFA95 /* Store */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		232D61DD1D09055700AEFA95 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				23E5F0631D12D3B1006F1CBF /* Controller */,
+				23E5F0651D12D3B1006F1CBF /* Model */,
+				23E5F0661D12D3B1006F1CBF /* View */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		232D61DF1D09055700AEFA95 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				239BB6351D0EEA14009A4DCB /* Controller */,
+				239BB6371D0EEA14009A4DCB /* Model */,
+				239BB6381D0EEA14009A4DCB /* View */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		232D61E11D09055700AEFA95 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				238045271D10E6BD00FCA1CB /* Controller */,
+				238045291D10E6BD00FCA1CB /* Model */,
+				2380452A1D10E6BD00FCA1CB /* View */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		232D61E31D09055700AEFA95 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				2380452E1D10F70800FCA1CB /* Controller */,
+				238045301D10F70800FCA1CB /* Model */,
+				238045311D10F70800FCA1CB /* View */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		232D61E51D09055700AEFA95 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				238CD8061D0FF82C0082194C /* Controller */,
+				238CD8081D0FF82C0082194C /* Model */,
+				238CD8091D0FF82C0082194C /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		232D61E71D09055700AEFA95 /* MineHome */ = {
+			isa = PBXGroup;
+			children = (
+				232D61E81D09055700AEFA95 /* Controller */,
+				232D61EB1D09055700AEFA95 /* Model */,
+				232D61EE1D09055700AEFA95 /* View */,
+			);
+			path = MineHome;
+			sourceTree = "<group>";
+		};
+		232D61E81D09055700AEFA95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				232D61E91D09055700AEFA95 /* HEMineVC.swift */,
+				232D61EA1D09055700AEFA95 /* HEMineVC_TabelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		232D61EB1D09055700AEFA95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				232D61ED1D09055700AEFA95 /* HEUserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		232D61EE1D09055700AEFA95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				232D61EF1D09055700AEFA95 /* HEMineVC_HeaderView.swift */,
+				232D61F01D09055700AEFA95 /* HEMineVC_TableHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		232D61F11D09055700AEFA95 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				232D61F21D09055700AEFA95 /* Controller */,
+				232D61F41D09055700AEFA95 /* Model */,
+				232D61F51D09055700AEFA95 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		232D61F21D09055700AEFA95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				232D61F31D09055700AEFA95 /* HEMineOrderVC.swift */,
+				239CA5451D0C04A3002A587E /* HEMineOrderStatusVC.swift */,
+				239CA5491D0C2201002A587E /* HEMineOrderDetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		232D61F41D09055700AEFA95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23BB90841D0B9B700064CC5B /* OrderData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		232D61F51D09055700AEFA95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23BB90881D0BAE1F0064CC5B /* HEMineOrderCell.swift */,
+				239CA54B1D0C41A3002A587E /* HEMineOrderStatusCell.swift */,
+				23CD6D591D0CF5E100398B32 /* HEOrderDetialView.swift */,
+				23CD6D5B1D0CFDE800398B32 /* HEOrderDetailUserView.swift */,
+				23CD6D5F1D0D048A00398B32 /* HEOrderGoodsListView.swift */,
+				23B751721D0D5E4500402C4A /* HEOrderEvaluateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		232D61F61D09055700AEFA95 /* Seeting */ = {
+			isa = PBXGroup;
+			children = (
+				232D61F71D09055700AEFA95 /* HEMineAboutMeVC.swift */,
+				232D61F81D09055700AEFA95 /* HEMineSettingVC.swift */,
+			);
+			path = Seeting;
+			sourceTree = "<group>";
+		};
+		232D61F91D09055700AEFA95 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				238045221D10E51A00FCA1CB /* Controller */,
+				238045241D10E51A00FCA1CB /* Model */,
+				238045251D10E51A00FCA1CB /* View */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		23330C501CFC34FD0086A715 /* ShopCar */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +906,76 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		238045221D10E51A00FCA1CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				238045231D10E51A00FCA1CB /* HEMineStoreVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		238045241D10E51A00FCA1CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		238045251D10E51A00FCA1CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		238045271D10E6BD00FCA1CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				238045281D10E6BD00FCA1CB /* HEMineFeedbackVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		238045291D10E6BD00FCA1CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2380452A1D10E6BD00FCA1CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2380452E1D10F70800FCA1CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2380452F1D10F70800FCA1CB /* HEMineHelpVC.swift */,
+				238045331D10FDF000FCA1CB /* HEMineHelpDetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		238045301D10F70800FCA1CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				238045371D11062F00FCA1CB /* HEQuestionData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		238045311D10F70800FCA1CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				238045351D1103AD00FCA1CB /* HeHelpQuestionHeaderView.swift */,
+				23ABEE211D12275D0041AB2D /* HEHelpAnswerCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		238300581CCDBBAD00864F7F /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,8 +983,9 @@
 				239889811CD4989200902BB1 /* Home */,
 				2371E8FD1CF6A55E00277B62 /* SuperMarket */,
 				23330C501CFC34FD0086A715 /* ShopCar */,
-				23AC16911CFE7A32004731DD /* Mine */,
+				232D61DC1D09055700AEFA95 /* Mine */,
 				238300641CCDBFD200864F7F /* Guide */,
+				23BA02D91D1594B600E331B6 /* Search */,
 				238300691CCDF4D600864F7F /* AD */,
 				2390FC7E1CD33C4A00FCE09F /* Resouce */,
 			);
@@ -677,6 +1010,30 @@
 			path = AD;
 			sourceTree = "<group>";
 		};
+		238CD8061D0FF82C0082194C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				238CD8071D0FF82C0082194C /* HEMineMessageVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		238CD8081D0FF82C0082194C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				238CD80D1D1015E80082194C /* HEMessageData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		238CD8091D0FF82C0082194C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				238CD80B1D10075C0082194C /* HESystemMsgCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2390FC7E1CD33C4A00FCE09F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,7 +1044,7 @@
 				2390FC831CD33C4A00FCE09F /* MinePlist.plist */,
 				2390FC841CD33C4A00FCE09F /* MyAddress */,
 				2390FC851CD33C4A00FCE09F /* MyCoupon */,
-				2390FC861CD33C4A00FCE09F /* MyOrders */,
+				23BB90861D0BABCF0064CC5B /* MyOrders */,
 				2390FC871CD33C4A00FCE09F /* Search */,
 				2390FC881CD33C4A00FCE09F /* SearchProduct */,
 				2390FC891CD33C4A00FCE09F /* supermarket */,
@@ -740,38 +1097,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		23AC16911CFE7A32004731DD /* Mine */ = {
+		239BB6351D0EEA14009A4DCB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				23AC16921CFE7A32004731DD /* Controller */,
-				23AC16931CFE7A32004731DD /* Model */,
-				23AC16941CFE7A32004731DD /* View */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		23AC16921CFE7A32004731DD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23333CAF1D050F4000FA7D39 /* HEMineVC.swift */,
-				23685DE11D051FBD000D968C /* HEMineTableViewController.swift */,
+				239BB6361D0EEA14009A4DCB /* HEMineCouponVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		23AC16931CFE7A32004731DD /* Model */ = {
+		239BB6371D0EEA14009A4DCB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				23AC16951CFE7B3B004731DD /* HEUserInfo.swift */,
-				23AC16971CFE7D97004731DD /* HEAddressData.swift */,
+				2300D1D71D0FC43C00202C59 /* HECouponData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		23AC16941CFE7A32004731DD /* View */ = {
+		239BB6381D0EEA14009A4DCB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23333CB11D05104300FA7D39 /* HEMineHeaderView.swift */,
+				239BB63A1D0EEB05009A4DCB /* HEBindingCouponView.swift */,
+				2300D1D51D0F961300202C59 /* HECouponCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -796,6 +1142,7 @@
 				23B2C6371D03CEEC00626ACC /* HECommonThreeLabelCell.swift */,
 				23D042571D040A4E004A37D5 /* HECommonOnlyRightLabelCell.swift */,
 				23D042591D040FE1004A37D5 /* HECommonDetailsChargesCell.swift */,
+				237B8DCE1D0803B0007E5C23 /* HECommonCenterLabelCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -816,6 +1163,46 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		23BA02D91D1594B600E331B6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				23BA02DA1D1594B600E331B6 /* Controller */,
+				23BA02DB1D1594B600E331B6 /* Model */,
+				23BA02DC1D1594B600E331B6 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		23BA02DA1D1594B600E331B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23BA02DD1D15965100E331B6 /* HESearchVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23BA02DB1D1594B600E331B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23159B8C1D1D0A98007B4E47 /* HEQueryHistoryModel.swift */,
+				23159B8E1D1D2915007B4E47 /* HEHotQueryModel.swift */,
+				23159B901D1D79FD007B4E47 /* HESearchProcducts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23BA02DC1D1594B600E331B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23DCCDFD1D162BB400E59A4C /* HESearchView.swift */,
+				23DCCDFF1D162BE400E59A4C /* HESearchResultCollectionView.swift */,
+				23159B8A1D1CCC5A007B4E47 /* HESearchKeyWordView.swift */,
+				23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */,
+				23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23D5DD961CE5DC1300048B51 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +1213,32 @@
 				23D5DD9B1CE5DC1300048B51 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		23E5F0631D12D3B1006F1CBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23E5F0641D12D3B1006F1CBF /* HEMineAddressVC.swift */,
+				232297B51D138C61003557A0 /* HEEditAddressVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23E5F0651D12D3B1006F1CBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23E5F0681D12D44E006F1CBF /* HEAddressData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23E5F0661D12D3B1006F1CBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23E5F06A1D12DC85006F1CBF /* HEAddressFootView.swift */,
+				23E5F06C1D12EAAB006F1CBF /* HEAddressCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -893,10 +1306,10 @@
 				2390FC991CD33C4A00FCE09F /* SearchProduct in Resources */,
 				2311ADD11CD9F4D40008CC74 /* MJRefresh.bundle in Resources */,
 				2390FC9B1CD33C4A00FCE09F /* SystemMessage in Resources */,
-				2390FC971CD33C4A00FCE09F /* MyOrders in Resources */,
 				2390FC9E1CD33C4A00FCE09F /* 系统消息 in Resources */,
 				2390FC951CD33C4A00FCE09F /* MyAddress in Resources */,
 				2390FC9C1CD33C4A00FCE09F /* UserMessage in Resources */,
+				23BB90871D0BABCF0064CC5B /* MyOrders in Resources */,
 				2390FC941CD33C4A00FCE09F /* MinePlist.plist in Resources */,
 				2390FC961CD33C4A00FCE09F /* MyCoupon in Resources */,
 				239660FA1CCCED2700113951 /* Assets.xcassets in Resources */,
@@ -917,45 +1330,70 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232D62081D09055700AEFA95 /* HEMineSettingVC.swift in Sources */,
 				2311ADCB1CD9F4D40008CC74 /* MJRefreshBackGifFooter.m in Sources */,
 				2311ADC41CD9F4D40008CC74 /* MJRefreshBackFooter.m in Sources */,
 				2311ADC61CD9F4D40008CC74 /* MJRefreshFooter.m in Sources */,
+				232D62031D09055700AEFA95 /* HEUserInfo.swift in Sources */,
+				2380452B1D10E6BD00FCA1CB /* HEMineFeedbackVC.swift in Sources */,
 				23D396D81CD8EB8800AE005C /* HERefreshHeader.swift in Sources */,
-				2389E4C91D05A14A00758F74 /* HEUpImageViewDownTitleLabelButton.swift in Sources */,
 				23126EC21CFFC29100AC7726 /* HEChoicePayWayViewController.swift in Sources */,
 				23D042581D040A4E004A37D5 /* HECommonOnlyRightLabelCell.swift in Sources */,
+				23159B8D1D1D0A98007B4E47 /* HEQueryHistoryModel.swift in Sources */,
 				2311ADC31CD9F4D40008CC74 /* MJRefreshAutoFooter.m in Sources */,
+				238CD80C1D10075C0082194C /* HESystemMsgCell.swift in Sources */,
+				238045341D10FDF000FCA1CB /* HEMineHelpDetailVC.swift in Sources */,
+				23CD6D5A1D0CF5E100398B32 /* HEOrderDetialView.swift in Sources */,
+				239BB63B1D0EEB05009A4DCB /* HEBindingCouponView.swift in Sources */,
 				230EA8C71CD704DB005DD2FF /* UIImage+GIF.m in Sources */,
 				230EA8B91CD704DB005DD2FF /* UIView+Extention.swift in Sources */,
 				230EA8B81CD704DB005DD2FF /* UIDevice+Extention.swift in Sources */,
 				230EA8B61CD704DB005DD2FF /* UIBarButtonItem+Extention.swift in Sources */,
+				23159B8F1D1D2915007B4E47 /* HEHotQueryModel.swift in Sources */,
 				23B8BD4E1CDAD4DF00FCDBB3 /* HEHotView.swift in Sources */,
 				23330C591CFC79EB0086A715 /* HEShopCarViewController.swift in Sources */,
 				23D5DDA21CE60A9200048B51 /* HEHomeCollectionFootView.swift in Sources */,
+				232D62071D09055700AEFA95 /* HEMineAboutMeVC.swift in Sources */,
 				2311ADE61CDA157B0008CC74 /* HEPageScrollView.swift in Sources */,
 				239660F31CCCED2700113951 /* AppDelegate.swift in Sources */,
+				239CA54C1D0C41A3002A587E /* HEMineOrderStatusCell.swift in Sources */,
+				23CD6D5C1D0CFDE800398B32 /* HEOrderDetailUserView.swift in Sources */,
 				230EA8C61CD704DB005DD2FF /* UIButton+WebCache.m in Sources */,
 				2311ADE41CDA12F10008CC74 /* HeadResources.swift in Sources */,
 				2311ADCE1CD9F4D40008CC74 /* MJRefreshGifHeader.m in Sources */,
+				2380452D1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift in Sources */,
 				238300661CCDBFD200864F7F /* GuideViewController.swift in Sources */,
 				230EA8C81CD704DB005DD2FF /* UIImage+MultiFormat.m in Sources */,
+				232D62051D09055700AEFA95 /* HEMineVC_TableHeaderView.swift in Sources */,
 				2311ADD51CD9F4D40008CC74 /* UIView+MJExtension.m in Sources */,
-				23AC16961CFE7B3B004731DD /* HEUserInfo.swift in Sources */,
+				23BA02DE1D15965100E331B6 /* HESearchVC.swift in Sources */,
+				232D62001D09055700AEFA95 /* HEMineVC.swift in Sources */,
 				230EA8AF1CD704DB005DD2FF /* HEAnimationTabBarController.swift in Sources */,
+				239CA5481D0C072B002A587E /* HESegmentedControl.swift in Sources */,
 				23FE7C161CFDCF6300645C9E /* HEShopCarCell.swift in Sources */,
+				232297B81D13A7BE003557A0 /* LeftImageRightTextButton.swift in Sources */,
 				23B8A95F1CF459B700E07007 /* HEWebViewController.swift in Sources */,
 				230EA8C11CD704DB005DD2FF /* SDWebImageDecoder.m in Sources */,
+				232297B61D138C61003557A0 /* HEEditAddressVC.swift in Sources */,
 				2371E90C1CF6DC9300277B62 /* HESuperMarket.swift in Sources */,
+				236E82C01D07B42C001D995B /* HEFileTools.swift in Sources */,
 				2311ADCF1CD9F4D40008CC74 /* MJRefreshNormalHeader.m in Sources */,
+				232D62011D09055700AEFA95 /* HEMineVC_TabelVC.swift in Sources */,
 				23AC168E1CFE6894004731DD /* HEHeaderCommentView.swift in Sources */,
 				23B2C6331D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift in Sources */,
+				23E5F06B1D12DC85006F1CBF /* HEAddressFootView.swift in Sources */,
 				23AC168C1CFE6826004731DD /* HEHeaderSuperMarketView.swift in Sources */,
 				230EA8AD1CD704DB005DD2FF /* Config.swift in Sources */,
 				2311ADD21CD9F4D40008CC74 /* MJRefreshConst.m in Sources */,
+				23CD6D601D0D048A00398B32 /* HEOrderGoodsListView.swift in Sources */,
 				23D5DD9C1CE5DC1300048B51 /* SVIndefiniteAnimatedView.m in Sources */,
-				23333CB21D05104300FA7D39 /* HEMineHeaderView.swift in Sources */,
+				23E5F0691D12D44E006F1CBF /* HEAddressData.swift in Sources */,
+				239CA54A1D0C2201002A587E /* HEMineOrderDetailVC.swift in Sources */,
 				230EA8CB1CD704DB005DD2FF /* UIImageView+WebCache.m in Sources */,
+				237B8DCF1D0803B0007E5C23 /* HECommonCenterLabelCell.swift in Sources */,
+				23CD6D5E1D0D020200398B32 /* UIImage+Extention.swift in Sources */,
 				230EA8B31CD704DB005DD2FF /* HESelectedAdressViewController.swift in Sources */,
+				23BB90851D0B9B710064CC5B /* OrderData.swift in Sources */,
 				2371E9101CF713E800277B62 /* HEProductCell.swift in Sources */,
 				235A10571CFEE828008DF56F /* HEShopCarTableView.swift in Sources */,
 				23B2C6311D03CC8500626ACC /* HECommonCell.swift in Sources */,
@@ -964,44 +1402,65 @@
 				23B2C6361D03CC8500626ACC /* HECommonTableViewController.swift in Sources */,
 				2311ADCA1CD9F4D40008CC74 /* MJRefreshAutoStateFooter.m in Sources */,
 				236B4B6C1CFBCE3F00D07D18 /* HEBadgeView.swift in Sources */,
+				23B751731D0D5E4500402C4A /* HEOrderEvaluateView.swift in Sources */,
 				230EA8C21CD704DB005DD2FF /* SDWebImageDownloader.m in Sources */,
+				238CD80E1D1015E80082194C /* HEMessageData.swift in Sources */,
+				2300D1D61D0F961300202C59 /* HECouponCell.swift in Sources */,
 				232C6B981CCE507700E7A55D /* ADModel.swift in Sources */,
+				238045381D11062F00FCA1CB /* HEQuestionData.swift in Sources */,
 				230EA8BC1CD704DB005DD2FF /* HE_Model2Dict.swift in Sources */,
 				23AC168A1CFE67E5004731DD /* HEHeaderReceiptAddressView.swift in Sources */,
 				2311ADD41CD9F4D40008CC74 /* UIScrollView+MJRefresh.m in Sources */,
 				2347A94E1CDF5531000FF1DC /* HEHomeVerticalCell.swift in Sources */,
+				23E5F06D1D12EAAB006F1CBF /* HEAddressCell.swift in Sources */,
 				230EA8CA1CD704DB005DD2FF /* UIImageView+HighlightedWebCache.m in Sources */,
-				23685DE21D051FBD000D968C /* HEMineTableViewController.swift in Sources */,
+				23DCCE001D162BE400E59A4C /* HESearchResultCollectionView.swift in Sources */,
 				230EA8B51CD704DB005DD2FF /* HETitleViewForNavigationItem.swift in Sources */,
 				230EA8B01CD704DB005DD2FF /* HEBaseNavigationController.swift in Sources */,
 				23330C571CFC35FC0086A715 /* HEShopCarTools.swift in Sources */,
 				2311ADC91CD9F4D40008CC74 /* MJRefreshAutoNormalFooter.m in Sources */,
+				239CA5461D0C04A3002A587E /* HEMineOrderStatusVC.swift in Sources */,
 				235A10591CFEE88F008DF56F /* HEEmptyGoodsView.swift in Sources */,
 				238300681CCDC9B800864F7F /* GuideCell.swift in Sources */,
 				2371E90E1CF6E97D00277B62 /* HECategoryCell.swift in Sources */,
-				23333CB01D050F4000FA7D39 /* HEMineVC.swift in Sources */,
 				2311ADC51CD9F4D40008CC74 /* MJRefreshComponent.m in Sources */,
+				2300D1D81D0FC43C00202C59 /* HECouponData.swift in Sources */,
+				23B263FE1D1E32FE001393B5 /* HENoSearchResultView.swift in Sources */,
+				238045361D1103AD00FCA1CB /* HeHelpQuestionHeaderView.swift in Sources */,
+				238045261D10E51A00FCA1CB /* HEMineStoreVC.swift in Sources */,
 				23B2C6351D03CC8500626ACC /* HECommonItem.swift in Sources */,
+				23ABEE221D12275D0041AB2D /* HEHelpAnswerCell.swift in Sources */,
 				23330C551CFC34FD0086A715 /* HEShopCarRedDotView.swift in Sources */,
 				23B2C6381D03CEEC00626ACC /* HECommonThreeLabelCell.swift in Sources */,
 				230EA8B71CD704DB005DD2FF /* UIColor+Extention.swift in Sources */,
 				23D5DD951CE5C39300048B51 /* HEBuyView.swift in Sources */,
 				23AC16901CFE68D6004731DD /* HEHeaderReserveView.swift in Sources */,
+				23159B911D1D79FD007B4E47 /* HESearchProcducts.swift in Sources */,
+				23B264001D1E3369001393B5 /* HEYellowShopCarView.swift in Sources */,
 				230EA8CC1CD704DB005DD2FF /* UIView+WebCacheOperation.m in Sources */,
+				232D62061D09055700AEFA95 /* HEMineOrderVC.swift in Sources */,
 				230EA8C01CD704DB005DD2FF /* SDWebImageCompat.m in Sources */,
+				232D620B1D0905BF00AEFA95 /* HEUpImageViewDownTitleLabelButton.swift in Sources */,
 				23A381421CDB7D7E001DA265 /* HEIconTitleView.swift in Sources */,
 				230EA8B11CD704DB005DD2FF /* HEBaseViewController.swift in Sources */,
+				232D62041D09055700AEFA95 /* HEMineVC_HeaderView.swift in Sources */,
 				23D0425A1D040FE1004A37D5 /* HECommonDetailsChargesCell.swift in Sources */,
 				230EA8BD1CD704DB005DD2FF /* MKAnnotationView+WebCache.m in Sources */,
+				23E5F0671D12D3B1006F1CBF /* HEMineAddressVC.swift in Sources */,
 				230EA8B21CD704DB005DD2FF /* HEMainTabBarController.swift in Sources */,
 				2311ADE21CDA12C50008CC74 /* HEHomeHeaderView.swift in Sources */,
+				239BB6391D0EEA14009A4DCB /* HEMineCouponVC.swift in Sources */,
+				2300D1DA1D0FCC0A00202C59 /* String+Extention.swift in Sources */,
+				23DCCDFE1D162BB400E59A4C /* HESearchView.swift in Sources */,
 				2371E90A1CF6DC4B00277B62 /* HESuperMarketViewController.swift in Sources */,
 				2371E9091CF6DC4B00277B62 /* HEProductViewController.swift in Sources */,
 				230EA8BB1CD704DB005DD2FF /* HE_Foundation.swift in Sources */,
+				238045321D10F70800FCA1CB /* HEMineHelpVC.swift in Sources */,
 				2311ADE11CDA12C50008CC74 /* HEHomeCollectionView.swift in Sources */,
 				2347A9501CDF6316000FF1DC /* FreshHot.swift in Sources */,
 				2311ADC81CD9F4D40008CC74 /* MJRefreshAutoGifFooter.m in Sources */,
 				230EA8C51CD704DB005DD2FF /* SDWebImagePrefetcher.m in Sources */,
+				23BB90891D0BAE1F0064CC5B /* HEMineOrderCell.swift in Sources */,
 				2311ADD31CD9F4D40008CC74 /* UIScrollView+MJExtension.m in Sources */,
 				23D5DD9E1CE5DC1300048B51 /* SVProgressHUD.m in Sources */,
 				230EA8BA1CD704DB005DD2FF /* HE_Dict2Model.swift in Sources */,
@@ -1010,15 +1469,16 @@
 				230EA8C31CD704DB005DD2FF /* SDWebImageDownloaderOperation.m in Sources */,
 				2383006C1CCDF52E00864F7F /* ADViewController.swift in Sources */,
 				2311ADC71CD9F4D40008CC74 /* MJRefreshHeader.m in Sources */,
+				238CD80A1D0FF82C0082194C /* HEMineMessageVC.swift in Sources */,
 				2311ADCC1CD9F4D40008CC74 /* MJRefreshBackNormalFooter.m in Sources */,
 				2311ADD01CD9F4D40008CC74 /* MJRefreshStateHeader.m in Sources */,
 				230EA8C41CD704DB005DD2FF /* SDWebImageManager.m in Sources */,
 				23BCB3F01CF7EB8D00F2D3C9 /* HESuperMarketHeaderView.swift in Sources */,
-				23AC16981CFE7D97004731DD /* HEAddressData.swift in Sources */,
 				23B2C6321D03CC8500626ACC /* HECommonArrowCell.swift in Sources */,
 				2311ADE01CDA12C50008CC74 /* HEHomeViewController.swift in Sources */,
 				2371E8FC1CF6A38400277B62 /* HETableView.swift in Sources */,
 				230EA8C91CD704DB005DD2FF /* UIImage+WebP.m in Sources */,
+				23159B8B1D1CCC5A007B4E47 /* HESearchKeyWordView.swift in Sources */,
 				23B2C6341D03CC8500626ACC /* HECommonSwitchCell.swift in Sources */,
 				230EA8AE1CD704DB005DD2FF /* HEAnimationController.swift in Sources */,
 				235A105B1CFEEAAD008DF56F /* HEShopCarFootView.swift in Sources */,
@@ -1115,6 +1575,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AXF",
@@ -1131,6 +1593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-143024986-qq.com.AXF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AXF/AXF+bridging+Header.h";
 			};
 			name = Debug;
@@ -1140,6 +1603,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AXF",
@@ -1156,6 +1621,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-143024986-qq.com.AXF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AXF/AXF+bridging+Header.h";
 			};
 			name = Release;

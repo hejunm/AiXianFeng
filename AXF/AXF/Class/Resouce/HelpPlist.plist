@@ -12,14 +12,6 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>可配送哪些城市?</string>
-		<key>texts</key>
-		<array>
-			<string>爱鲜蜂已在北京、上海、广州、深圳、佛山、苏州、杭州、南京、成都、武汉、宁波、天津、三河、无锡十四个城市开通配送服务，其他城市将会陆续开通，敬请关注。</string>
-		</array>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>如何新增、编辑和删除收货地址？</string>
 		<key>texts</key>
 		<array>

@@ -9,7 +9,9 @@
 import UIKit
 
 class HEBaseViewController :UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }

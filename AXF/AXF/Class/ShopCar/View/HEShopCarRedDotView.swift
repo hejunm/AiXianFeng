@@ -38,7 +38,7 @@ class HEShopCarRedDotView: HEBadgeView {
     }
     
     private func startAni(){
-        if isAnimation{ return }
+        if isAnimation{  return }
         isAnimation = true
         let ShopCarRedDotAnimationDuration: NSTimeInterval = 0.2
         UIView.animateWithDuration(ShopCarRedDotAnimationDuration, animations: { () -> Void in

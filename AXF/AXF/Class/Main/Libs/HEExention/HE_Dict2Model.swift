@@ -53,6 +53,7 @@ extension NSObject{
                 
                 var value:AnyObject! = dict[propertyKey]      //取得字典中的值
                 if value == nil {continue}
+                if value.isMemberOfClass(NSNull){ continue}
                 
                 let valueType =  "\(value.classForCoder)"     //字典中保存的值得类型
                 if valueType == "NSDictionary"{               //1，值是字典。 这个字典要对应一个自定义的模型类并且这个类不是Foundation中定义的类型。
@@ -115,7 +116,7 @@ extension NSObject{
         }
     }
     
-    /** 从指定文件中获取字典， 并转为模型*/
+    /** 从指定文件中获取字典或数组， 并转为模型*/
     class func loadDataFromFile(path:String, completion:(data: AnyObject!, error: NSError!) -> Void) {
         let data:NSData! = NSData(contentsOfFile: path)
         if data == nil {
@@ -123,9 +124,19 @@ extension NSObject{
             return
         }
         do{
-           let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-            if let model = objectWithKeyValues(dict as? NSDictionary){
-                completion(data: model, error: nil)
+           let object = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            if let dict = object as? NSDictionary{
+                if let model = objectWithKeyValues(dict){
+                    completion(data: model, error: nil)
+                }else{
+                    completion(data: nil, error: NSError(domain: "转换失败", code: -1, userInfo: nil))
+                }
+            }else if let array =  object as? NSArray{
+                if let model = objectArrayWithKeyValuesArray(array){
+                    completion(data: model, error: nil)
+                }else{
+                    completion(data: nil, error: NSError(domain: "转换失败", code: -1, userInfo: nil))
+                }
             }else{
                 completion(data: nil, error: NSError(domain: "转换失败", code: -1, userInfo: nil))
             }

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HEMineHeaderView: UIImageView {
+class HEMineVC_HeaderView: UIImageView {
     static let mineHeaderViewH:CGFloat = 150
     
     var iconView:HEIconView!
@@ -26,7 +26,7 @@ class HEMineHeaderView: UIImageView {
         
         settingBtn = UIButton()
         settingBtn.setImage(UIImage(named: "v2_my_settings_icon"), forState: .Normal)
-        settingBtn.addTarget(self, action: #selector(HEMineHeaderView.btnClickAction(_:)), forControlEvents: .TouchUpInside)
+        settingBtn.addTarget(self, action: #selector(HEMineVC_HeaderView.btnClickAction(_:)), forControlEvents: .TouchUpInside)
         addSubview(settingBtn)
         
         self.settingBtnClick = btnClick
@@ -38,7 +38,7 @@ class HEMineHeaderView: UIImageView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let iconViewWH: CGFloat = HEMineHeaderView.mineHeaderViewH
+        let iconViewWH: CGFloat = HEMineVC_HeaderView.mineHeaderViewH
         iconView.frame = CGRectMake((width - iconViewWH) * 0.5, 0, iconViewWH, iconViewWH)
         settingBtn.frame = CGRectMake(width - 50, 10, 50, 50)
     }
