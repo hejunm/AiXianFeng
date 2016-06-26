@@ -21,7 +21,6 @@ class HESearchVC: HEAnimationController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = HEGlobalBackgroundColor
@@ -78,9 +77,15 @@ class HESearchVC: HEAnimationController {
     
     private func buildYellowShopCarView(){
         shopCarView = HEYellowShopCarView()
-        shopCarView.redDot.setBadgeValue(HEShopCarTools.shareShopCarTools.getProduceCount())
         shopCarView.hidden = true
+        shopCarView.addTarget(self, action: #selector(HESearchVC.showShopCarVC), forControlEvents: .TouchUpInside)
         view.addSubview(shopCarView)
+    }
+    
+    @objc private func showShopCarVC(){
+        //购物车对应导航控制器
+        let  shopCarNavi = HEBaseNavigationController(rootViewController: HEShopCarViewController())
+        presentViewController(shopCarNavi, animated: true, completion: { }) //显示出导航控制器
     }
 }
 
@@ -153,5 +158,10 @@ extension HESearchVC:UICollectionViewDataSource{
 extension HESearchVC:UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake((view.width - HEHomeCollectionViewCellMargin * 2) * 0.5 - HEHomeCollectionViewCellMargin/2, 250)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let productDetailVC = HEProductDetailVC(goods: (searchResultArray?[indexPath.row])!)
+        navigationController?.pushViewController(productDetailVC, animated: true)
     }
 }

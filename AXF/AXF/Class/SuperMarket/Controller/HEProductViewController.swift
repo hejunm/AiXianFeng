@@ -122,6 +122,12 @@ extension HEProductViewController:UITableViewDelegate{
             print("willDisplaySection")
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let goods = superMarketData?.getGoodsArrayForCategoryAt(index: indexPath.section)[indexPath.row]
+        let productDetailVC = HEProductDetailVC(goods: goods!)
+        navigationController?.pushViewController(productDetailVC, animated: true)
+    }
     func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
         if delegate != nil && !isScrollDown && isScrollByDrag{     //向上时，上一个消失，切换到下一个 section+1
             delegate.didEndDisplaySection(section)

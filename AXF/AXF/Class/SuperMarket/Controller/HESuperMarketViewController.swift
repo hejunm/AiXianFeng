@@ -85,7 +85,6 @@ extension HESuperMarketViewController :UITableViewDelegate{
         productsVC.selectSection(indexPath.row)
         
         //2, 滚动到中间位置
-     
         let contentViewHeight = CGFloat(tableView.numberOfRowsInSection(0)) * tableView.rowHeight
         let selectedCellCenterY = tableView.cellForRowAtIndexPath(indexPath)!.center.y
         var offsetY = selectedCellCenterY - tableView.center.y

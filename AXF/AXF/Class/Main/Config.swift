@@ -24,6 +24,7 @@ public let HETextGreyColol = UIColor.colorWithCustom(130, g: 130, b: 130)
 public let HETextBlackColor = UIColor.colorWithCustom(50, g: 50, b: 50)
 public let HEWhiteColor = UIColor.colorWithCustom(255, g: 255, b: 255)
 
+
 // MARK: -字体大小
 public let HENavigationTextViewFont = UIFont.systemFontOfSize(10)
 public let HEHomeCollectionTextFont = UIFont.systemFontOfSize(14)
@@ -31,6 +32,8 @@ public let HEHomeCollectionTextFont = UIFont.systemFontOfSize(14)
 // MARK: -通知
 public let GuideViewControllerDidFinish = "GuideViewControllerDidFinish"
 public let ADImageLoadFinished =  "ADImageLoadFinished"
+///修改购物车小圆点商品数量
+public let HENotiShopCarProduceNumChanged = "HENotiShopCarProduceNumChanged"
 public let HENotiShopCarNoProduce = "HENotiShopCarNoProduce"        //购物车中没有数据时发送
 public let HENotiShopCarTotalAmountChanged = "HENotiShopCarTotalAmountChanged" //购物车中的金额改变
 public let HENotiCheckBoxGroupSelectChanged = "HENotiCheckBoxGroupSelectChanged" //单选改变时触发

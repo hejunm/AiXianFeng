@@ -31,12 +31,6 @@ class HEMainTabBarController: HEAnimationTabBarController,UITabBarControllerDele
         return imageView
     }()
     
-    //购物车对应导航控制器
-    lazy private var shopCarNavi:HEBaseNavigationController! = {
-        let shopCarVC = HEShopCarViewController()
-        return HEBaseNavigationController(rootViewController: shopCarVC)
-    }()
-    
     var adImage:UIImage?{
         didSet{
             if adImage != nil {
@@ -78,6 +72,8 @@ class HEMainTabBarController: HEAnimationTabBarController,UITabBarControllerDele
         let childArr = tabBarController.childViewControllers as NSArray
         let index = childArr.indexOfObject(viewController)
         if index == 2 {
+            //购物车对应导航控制器
+            let  shopCarNavi = HEBaseNavigationController(rootViewController: HEShopCarViewController())
             presentViewController(shopCarNavi, animated: true, completion: { }) //显示出导航控制器
             return false
         }

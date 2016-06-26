@@ -105,7 +105,6 @@ class HEBuyView: UIView {
             ProgressHUD.showImage(UIImage(named: "v2_orderSuccess")!, status: "\(goods.name!)库存不足了\n先买这么多, 过段时间再来看看吧~")
         }else{
             buyNumber += 1
-            HEShopCarRedDotView.shareShopCarRedDotView.addProductNum(true)
             HEShopCarTools.shareShopCarTools.addProduct(goods) //添加到购物车
             if addButtonClick != nil{ //添加时的动画
                 addButtonClick()
@@ -116,7 +115,6 @@ class HEBuyView: UIView {
     
     func reduceGoodsButtonClick(){
         buyNumber -= 1
-        HEShopCarRedDotView.shareShopCarRedDotView.reduceProductNum(true)
         if buyNumber == 0{
             HEShopCarTools.shareShopCarTools.reduceProduct(goods) //从购物车中删除
             if removeGoods != nil{

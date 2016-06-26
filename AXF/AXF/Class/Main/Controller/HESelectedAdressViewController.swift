@@ -36,7 +36,10 @@ class HESelectedAdressViewController: HEAnimationController {
     }
     
     //MARK: action
-    func leftNavItemClick(){}
+    func leftNavItemClick(){
+        let qrCodeVC = HEQRCodeVC()
+        navigationController?.pushViewController(qrCodeVC, animated: true)
+    }
     
     func rightNavItemClick(){
         let searchVC = HESearchVC()

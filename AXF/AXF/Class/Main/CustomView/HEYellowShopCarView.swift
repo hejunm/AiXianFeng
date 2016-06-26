@@ -16,7 +16,9 @@ class HEYellowShopCarView: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setBackgroundImage(UIImage(named: "v2_shop_empty"), forState: .Normal)
+        setBackgroundImage(UIImage(named: "v2_shop_empty"), forState: .Highlighted)
         imageView?.contentMode = .ScaleAspectFit
+        redDot.setBadgeValue(HEShopCarTools.shareShopCarTools.getShopCarBadgeValue())
         addSubview(redDot)
     }
     

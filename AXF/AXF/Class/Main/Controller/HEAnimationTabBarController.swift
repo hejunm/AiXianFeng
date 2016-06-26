@@ -130,9 +130,6 @@ class HEAnimationTabBarController: UITabBarController {
         let badgeView = HEShopCarRedDotView.shareShopCarRedDotView
         
         let count = self.tabBar.items!.count
-//        let imageW:CGFloat = 21
-//        let imageX:CGFloat = (ScreenWidth / CGFloat(count) - 21) * 0.5
-//        let imageY:CGFloat = 8
         badgeView.x = (ScreenWidth / CGFloat(count) - 21) * 0.5+21+2
         badgeView.y = 6
         viewContainer.addSubview(badgeView)

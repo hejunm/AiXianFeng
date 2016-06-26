@@ -27,10 +27,12 @@ class HEShopCarTools: NSObject {
     func addProduct(goods:Goods){
         for item in self.products{
             if item.id == goods.id{
+                postProduceNumChangedNoti()
                 return
             }
         }
         self.products.append(goods)
+        postProduceNumChangedNoti()
     }
     
     /**将goods从购物车中删除*/
@@ -45,6 +47,7 @@ class HEShopCarTools: NSObject {
         if getProduceCount() == 0{
             NSNotificationCenter.defaultCenter().postNotificationName(HENotiShopCarNoProduce, object: nil)
         }
+        postProduceNumChangedNoti()
     }
     
     /**返回商品数量*/
@@ -52,7 +55,16 @@ class HEShopCarTools: NSObject {
         return self.products.count
     }
     
-    /** 获取所有的商品 */
+    /**购物车显示的指示数字*/
+    func getShopCarBadgeValue()->Int{
+        var count:Int = 0
+        for item in self.products{
+            count += item.userBuyNumber
+        }
+        return count
+    }
+    
+    /** 获取所有的商品*/
     func getAllProduce()->[Goods]?{
         if products.count == 0{return nil}
         return products
@@ -69,5 +81,10 @@ class HEShopCarTools: NSObject {
             totalAmount += Double(item.price!)! * Double(item.userBuyNumber)
         }
         return "\(totalAmount)"
+    }
+    
+    /** 购物车中商品数量改变时发送通知, 购物车上的小红点相应*/
+    private func postProduceNumChangedNoti(){
+        NSNotificationCenter.defaultCenter().postNotificationName(HENotiShopCarProduceNumChanged, object: nil)
     }
 }

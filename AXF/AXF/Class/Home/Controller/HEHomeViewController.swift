@@ -190,6 +190,8 @@ extension HEHomeViewController:UICollectionViewDataSource,UICollectionViewDelega
             navigationController?.pushViewController(webViewVC, animated: true)
         }else{
              //MARK: TODO
+            let productDetailVC = HEProductDetailVC(goods: (freshHot?.data?[indexPath.item])!)
+            navigationController?.pushViewController(productDetailVC, animated: true)
         }
     }
     

@@ -70,6 +70,7 @@
 		23159B8D1D1D0A98007B4E47 /* HEQueryHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B8C1D1D0A98007B4E47 /* HEQueryHistoryModel.swift */; };
 		23159B8F1D1D2915007B4E47 /* HEHotQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B8E1D1D2915007B4E47 /* HEHotQueryModel.swift */; };
 		23159B911D1D79FD007B4E47 /* HESearchProcducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23159B901D1D79FD007B4E47 /* HESearchProcducts.swift */; };
+		231A4FC31D1EC680007A2216 /* HEQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A4FC21D1EC680007A2216 /* HEQRCodeVC.swift */; };
 		232297B61D138C61003557A0 /* HEEditAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232297B51D138C61003557A0 /* HEEditAddressVC.swift */; };
 		232297B81D13A7BE003557A0 /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */; };
 		232C6B981CCE507700E7A55D /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C6B971CCE507600E7A55D /* ADModel.swift */; };
@@ -144,7 +145,6 @@
 		23AC168E1CFE6894004731DD /* HEHeaderCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC168D1CFE6894004731DD /* HEHeaderCommentView.swift */; };
 		23AC16901CFE68D6004731DD /* HEHeaderReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC168F1CFE68D6004731DD /* HEHeaderReserveView.swift */; };
 		23B263FE1D1E32FE001393B5 /* HENoSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */; };
-		23B264001D1E3369001393B5 /* HEYellowShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */; };
 		23B2C6311D03CC8500626ACC /* HECommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C6291D03CC8500626ACC /* HECommonCell.swift */; };
 		23B2C6321D03CC8500626ACC /* HECommonArrowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C62A1D03CC8500626ACC /* HECommonArrowCell.swift */; };
 		23B2C6331D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2C62B1D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift */; };
@@ -179,6 +179,9 @@
 		23E5F0691D12D44E006F1CBF /* HEAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F0681D12D44E006F1CBF /* HEAddressData.swift */; };
 		23E5F06B1D12DC85006F1CBF /* HEAddressFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F06A1D12DC85006F1CBF /* HEAddressFootView.swift */; };
 		23E5F06D1D12EAAB006F1CBF /* HEAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5F06C1D12EAAB006F1CBF /* HEAddressCell.swift */; };
+		23F3ABDB1D1F987F00D7C1F5 /* HEProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3ABDA1D1F987F00D7C1F5 /* HEProductDetailVC.swift */; };
+		23F3ABDD1D1F992000D7C1F5 /* HEDiscountPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3ABDC1D1F992000D7C1F5 /* HEDiscountPriceView.swift */; };
+		23F3ABDF1D1F9BD400D7C1F5 /* HEYellowShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3ABDE1D1F9BD400D7C1F5 /* HEYellowShopCarView.swift */; };
 		23FE7C161CFDCF6300645C9E /* HEShopCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE7C151CFDCF6300645C9E /* HEShopCarCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -282,6 +285,7 @@
 		23159B8C1D1D0A98007B4E47 /* HEQueryHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEQueryHistoryModel.swift; sourceTree = "<group>"; };
 		23159B8E1D1D2915007B4E47 /* HEHotQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHotQueryModel.swift; sourceTree = "<group>"; };
 		23159B901D1D79FD007B4E47 /* HESearchProcducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HESearchProcducts.swift; sourceTree = "<group>"; };
+		231A4FC21D1EC680007A2216 /* HEQRCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEQRCodeVC.swift; sourceTree = "<group>"; };
 		232297B51D138C61003557A0 /* HEEditAddressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEEditAddressVC.swift; sourceTree = "<group>"; };
 		232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageRightTextButton.swift; sourceTree = "<group>"; };
 		232C6B971CCE507600E7A55D /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
@@ -360,7 +364,6 @@
 		23AC168D1CFE6894004731DD /* HEHeaderCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderCommentView.swift; sourceTree = "<group>"; };
 		23AC168F1CFE68D6004731DD /* HEHeaderReserveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEHeaderReserveView.swift; sourceTree = "<group>"; };
 		23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HENoSearchResultView.swift; sourceTree = "<group>"; };
-		23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEYellowShopCarView.swift; sourceTree = "<group>"; };
 		23B2C6291D03CC8500626ACC /* HECommonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonCell.swift; sourceTree = "<group>"; };
 		23B2C62A1D03CC8500626ACC /* HECommonArrowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonArrowCell.swift; sourceTree = "<group>"; };
 		23B2C62B1D03CC8500626ACC /* HECommonOnlyLeftLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HECommonOnlyLeftLabelCell.swift; sourceTree = "<group>"; };
@@ -397,6 +400,9 @@
 		23E5F0681D12D44E006F1CBF /* HEAddressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressData.swift; sourceTree = "<group>"; };
 		23E5F06A1D12DC85006F1CBF /* HEAddressFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressFootView.swift; sourceTree = "<group>"; };
 		23E5F06C1D12EAAB006F1CBF /* HEAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEAddressCell.swift; sourceTree = "<group>"; };
+		23F3ABDA1D1F987F00D7C1F5 /* HEProductDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEProductDetailVC.swift; sourceTree = "<group>"; };
+		23F3ABDC1D1F992000D7C1F5 /* HEDiscountPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEDiscountPriceView.swift; sourceTree = "<group>"; };
+		23F3ABDE1D1F9BD400D7C1F5 /* HEYellowShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEYellowShopCarView.swift; sourceTree = "<group>"; };
 		23FE7C151CFDCF6300645C9E /* HEShopCarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HEShopCarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -434,6 +440,7 @@
 				230EA87A1CD704DA005DD2FF /* HEBaseViewController.swift */,
 				230EA87B1CD704DA005DD2FF /* HEMainTabBarController.swift */,
 				230EA87C1CD704DA005DD2FF /* HESelectedAdressViewController.swift */,
+				231A4FC21D1EC680007A2216 /* HEQRCodeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -450,6 +457,7 @@
 				239CA5471D0C072B002A587E /* HESegmentedControl.swift */,
 				2380452C1D10EB0600FCA1CB /* HEPlaceHolderTextView.swift */,
 				232297B71D13A7BE003557A0 /* LeftImageRightTextButton.swift */,
+				23F3ABDE1D1F9BD400D7C1F5 /* HEYellowShopCarView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -636,6 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				2311ADDB1CDA12C50008CC74 /* HEHomeViewController.swift */,
+				23F3ABDA1D1F987F00D7C1F5 /* HEProductDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -660,6 +669,7 @@
 				2347A94B1CDF5515000FF1DC /* HEHomeHorizontalCell.swift */,
 				2347A94D1CDF5531000FF1DC /* HEHomeVerticalCell.swift */,
 				23D5DDA11CE60A9200048B51 /* HEHomeCollectionFootView.swift */,
+				23F3ABDC1D1F992000D7C1F5 /* HEDiscountPriceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1198,7 +1208,6 @@
 				23DCCDFF1D162BE400E59A4C /* HESearchResultCollectionView.swift */,
 				23159B8A1D1CCC5A007B4E47 /* HESearchKeyWordView.swift */,
 				23B263FD1D1E32FD001393B5 /* HENoSearchResultView.swift */,
-				23B263FF1D1E3369001393B5 /* HEYellowShopCarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1332,6 +1341,7 @@
 			files = (
 				232D62081D09055700AEFA95 /* HEMineSettingVC.swift in Sources */,
 				2311ADCB1CD9F4D40008CC74 /* MJRefreshBackGifFooter.m in Sources */,
+				23F3ABDB1D1F987F00D7C1F5 /* HEProductDetailVC.swift in Sources */,
 				2311ADC41CD9F4D40008CC74 /* MJRefreshBackFooter.m in Sources */,
 				2311ADC61CD9F4D40008CC74 /* MJRefreshFooter.m in Sources */,
 				232D62031D09055700AEFA95 /* HEUserInfo.swift in Sources */,
@@ -1345,6 +1355,7 @@
 				238045341D10FDF000FCA1CB /* HEMineHelpDetailVC.swift in Sources */,
 				23CD6D5A1D0CF5E100398B32 /* HEOrderDetialView.swift in Sources */,
 				239BB63B1D0EEB05009A4DCB /* HEBindingCouponView.swift in Sources */,
+				23F3ABDF1D1F9BD400D7C1F5 /* HEYellowShopCarView.swift in Sources */,
 				230EA8C71CD704DB005DD2FF /* UIImage+GIF.m in Sources */,
 				230EA8B91CD704DB005DD2FF /* UIView+Extention.swift in Sources */,
 				230EA8B81CD704DB005DD2FF /* UIDevice+Extention.swift in Sources */,
@@ -1369,6 +1380,7 @@
 				23BA02DE1D15965100E331B6 /* HESearchVC.swift in Sources */,
 				232D62001D09055700AEFA95 /* HEMineVC.swift in Sources */,
 				230EA8AF1CD704DB005DD2FF /* HEAnimationTabBarController.swift in Sources */,
+				23F3ABDD1D1F992000D7C1F5 /* HEDiscountPriceView.swift in Sources */,
 				239CA5481D0C072B002A587E /* HESegmentedControl.swift in Sources */,
 				23FE7C161CFDCF6300645C9E /* HEShopCarCell.swift in Sources */,
 				232297B81D13A7BE003557A0 /* LeftImageRightTextButton.swift in Sources */,
@@ -1413,6 +1425,7 @@
 				2311ADD41CD9F4D40008CC74 /* UIScrollView+MJRefresh.m in Sources */,
 				2347A94E1CDF5531000FF1DC /* HEHomeVerticalCell.swift in Sources */,
 				23E5F06D1D12EAAB006F1CBF /* HEAddressCell.swift in Sources */,
+				231A4FC31D1EC680007A2216 /* HEQRCodeVC.swift in Sources */,
 				230EA8CA1CD704DB005DD2FF /* UIImageView+HighlightedWebCache.m in Sources */,
 				23DCCE001D162BE400E59A4C /* HESearchResultCollectionView.swift in Sources */,
 				230EA8B51CD704DB005DD2FF /* HETitleViewForNavigationItem.swift in Sources */,
@@ -1436,7 +1449,6 @@
 				23D5DD951CE5C39300048B51 /* HEBuyView.swift in Sources */,
 				23AC16901CFE68D6004731DD /* HEHeaderReserveView.swift in Sources */,
 				23159B911D1D79FD007B4E47 /* HESearchProcducts.swift in Sources */,
-				23B264001D1E3369001393B5 /* HEYellowShopCarView.swift in Sources */,
 				230EA8CC1CD704DB005DD2FF /* UIView+WebCacheOperation.m in Sources */,
 				232D62061D09055700AEFA95 /* HEMineOrderVC.swift in Sources */,
 				230EA8C01CD704DB005DD2FF /* SDWebImageCompat.m in Sources */,
