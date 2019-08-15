@@ -18,9 +18,9 @@
 
 
  ### 3.  首页：轮播图，商品集合，添加商品到购物车（有添加动画）。点击商品进入商品详情页，点击轮播图等加载对应的网页。在NavigationBar中包含扫一扫，搜索，选择收货地址item。
-首页效果和轮播图效果
+
 ![首页效果和轮播图效果](http://upload-images.jianshu.io/upload_images/1748276-7a3295f8a00c8697?imageMogr2/auto-orient/strip)
-添加商品动画
+
 ![添加商品动画](http://upload-images.jianshu.io/upload_images/1748276-e3ba2f618b65f349?imageMogr2/auto-orient/strip)
 
  ### 4. 扫一扫： 二维码，条形码扫描。
